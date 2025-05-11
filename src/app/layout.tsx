@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Providers from "./Providers";
+import { harper, manrope, roboto } from "./font";
 
 export const metadata: Metadata = {
   title: "Hero Studio",
@@ -14,7 +15,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="">
+      <body
+        className={`
+        ${manrope.className} ${manrope.variable} 
+        ${roboto.variable} 
+        ${harper.variable} 
+        antialiased
+        `}
+      >
         <Providers>{children}</Providers>
       </body>
     </html>
