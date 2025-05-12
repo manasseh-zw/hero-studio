@@ -1,10 +1,10 @@
 import SpotlightCard from "@/Components/SpotlightCard";
 import { AppFeatures } from "@/data/features";
 
-export default function Features() {
+export default function Showcase() {
   return (
     <>
-      <div className="mt-4 sm:mt-32">
+      <div className="mt-2 sm:mt-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 space-y-8">
           <div className="text-center font-roboto font-bold leading-[1.2] tracking-tight text-[40px]">
             <div className="bg-hero-section-title bg-clip-text text-transparent">

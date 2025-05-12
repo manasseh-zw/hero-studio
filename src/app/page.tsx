@@ -1,5 +1,5 @@
 import AppNavbar from "@/Components/Navbar";
-import Features from "@/Sections/Features";
+import Showcase from "@/Sections/Showcase";
 import Hero from "@/Sections/Hero";
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
         <AppNavbar />
         <Hero />
       </div>
-      <Features />
+      <Showcase />
     </main>
   );
 }

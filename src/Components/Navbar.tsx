@@ -58,7 +58,7 @@ export default function AppNavbar(props: NavbarProps) {
         className={cn(
           "max-w-full rounded-full bg-transparent transition-all duration-500 ease-in-out font-roboto border-1 border-zinc-700 border-opacity-0   ",
           scrolled
-            ? "bg-zinc-900 bg-opacity-70 h-14 backdrop-blur-md shadow-zinc-900/20 border-1 border-zinc-600 border-opacity-15 shadow-lg max-w-5xl px-3 py-2"
+            ? "bg-zinc-900 bg-opacity-70 h-14 backdrop-blur-md shadow-zinc-900/20 border-1 border-zinc-600 border-opacity-20 shadow-lg max-w-5xl px-3 py-2"
             : "h-16 backdrop-blur-none max-w-6xl"
         )}
         classNames={{

@@ -12,19 +12,20 @@ export default function Hero() {
         <div>
           <HeroAvatarGroup />
         </div>
-        <div className="text-center font-roboto font-black leading-[1.2] tracking-tight text-[64px]">
+        <div className="text-center font-roboto font-extrabold leading-[1.1]  text-[64px]">
           <div className="bg-hero-section-title bg-clip-text text-transparent">
             Build Premium Apps <br />{" "}
             <span className="text-[60px]">And Ship Faster.</span>
           </div>
         </div>
-        <p className="text-center font-bold leading-7 text-default-600 text-pretty sm:w-[600px] sm:text-[18px]">
+        <p className="text-center font-bold leading-7 text-default-600 text-pretty sm:w-[600px] sm:text-[16px]">
           The AI-powered platform for building production-ready apps <br />
           faster, smarter, and without limits.
         </p>
         <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
           <Button
             size="lg"
+            color="primary"
             className="bg-default-foreground font-bold leading-5 text-background"
             radius="full"
           >
@@ -49,11 +50,11 @@ export default function Hero() {
           alt="background image"
         />
       </div>
-
+p
       <div className="w-full z-10">
         <Ticker
           shouldPauseOnHover
-          gap="40px"
+          gap="20px"
           className="z-10 opacity-45"
           isReverse={false}
         >

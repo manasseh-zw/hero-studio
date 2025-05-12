@@ -3,14 +3,14 @@ import { AvatarGroup, Avatar } from "@heroui/react";
 
 export default function HeroAvatarGroup() {
   return (
-    <div className="p-2 px-4 bg-gray-700 bg-opacity-20 border-1 border-opacity-15 border-gray-800 backdrop-blur-sm rounded-full ">
+    <div className="p-2 px-4 bg-zinc-600 bg-opacity-20 border-1 border-opacity-30 border-zinc-800 backdrop-blur-sm rounded-full shadow-sm">
       <AvatarGroup
         color="primary"
         size="sm"
         max={4}
         renderCount={() => (
           <p className="text-small cursor-pointer text-foreground font-medium ms-2">
-            Join <span className="text-teal-300">1000+</span> Builders.
+            Join <span className="text-lime-300">1000+</span> Builders.
           </p>
         )}
         total={10}
