@@ -1,5 +1,6 @@
 import HeroAvatarGroup from "@/Components/HeroAvatarGroup";
 import Ticker from "@/Components/Ticker";
+import SubtleGlow from "@/Components/SubtleGlow";
 import { logos } from "@/data/logos";
 import { Button } from "@heroui/button";
 import { Play } from "lucide-react";
@@ -13,16 +14,17 @@ export default function Hero() {
         <div>
           <HeroAvatarGroup />
         </div>
-        <div className="text-center font-roboto font-extrabold leading-[1.1]  text-[64px]">
+        <div className="text-center font-roboto font-extrabold leading-[1.1] text-[64px]">
           <div className="bg-hero-section-title bg-clip-text text-transparent">
-            Build Premium Apps <br />{" "}
-            <span className="text-[60px]">And Ship Faster.</span>
+            Manage Projects Smarter <br />{" "}
+            <span className="text-[60px]">And Deliver Faster.</span>
           </div>
         </div>
-        <p className="text-center font-bold leading-7 text-default-600 text-pretty sm:w-[600px] sm:text-[16px]">
-          The AI-powered platform for building production-ready apps <br />
-          faster, smarter, and without limits.
+        <p className="text-center  leading-7 text-default-600 text-pretty sm:w-[600px] sm:text-[16px]">
+          The AI-powered platform for seamless project management, intelligent
+          automation, and real-time team collaboration.
         </p>
+
         <div className="flex flex-col items-center justify-center mt-2 gap-6 sm:flex-row">
           <Button
             size="lg"

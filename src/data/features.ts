@@ -1,38 +1,38 @@
 export const AppFeatures = [
   {
-    name: "AI-Powered Code Generation",
+    name: "AI-Driven Task Assistance",
     description:
-      "Generate production-ready code with a single prompt. Build faster with AI-driven templates optimized for speed and scalability.",
+      "AI breaks down projects, suggests next steps, and automates task creation. Get smart recommendations to stay on track.",
     imageSrc: "/feature1.jpg",
   },
   {
-    name: "Drag-and-Drop App Builder",
+    name: "Intuitive Project Setup",
     description:
-      "Create stunning, responsive UIs without touching a single line of code. Perfect for rapid prototyping and full-scale apps.",
+      "Easily structure projects with a user-friendly interface. Use voice or simple inputs to define goals, timelines, and teams.",
     imageSrc: "/feature2.jpg",
   },
   {
-    name: "One-Click Deployment",
+    name: "Quick Project Kickoff",
     description:
-      "Deploy your apps to the cloud with just one click. Skip the DevOps headaches and focus on what you do best — building.",
+      "Launch projects, add tasks, and assign roles instantly. Use templates or build from scratch with simple blocks.",
     imageSrc: "/feature3.jpg",
   },
   {
-    name: "Component Marketplace",
+    name: "Template & Workflow Library",
     description:
-      "Access a rich library of pre-built components, fully customizable to match your brand and speed up development.",
+      "Access pre-built project templates and automated workflows. Customize them to fit your specific needs.",
     imageSrc: "/feature4.jpg",
   },
   {
-    name: "Real-Time Collaboration",
+    name: "Real-Time Team Collaboration",
     description:
-      "Work with your team in real-time, with live preview and instant updates for faster iteration cycles.",
+      "Collaborate seamlessly within tasks and projects. Share updates and make decisions instantly.",
     imageSrc: "/feature5.jpg",
   },
   {
-    name: "Integrated Analytics and Monitoring",
+    name: "Integrated Project Analytics",
     description:
-      "Track app performance, user engagement, and key metrics without adding a single line of tracking code.",
+      "Gain insights into project progress and team performance with built-in analytics dashboards. Track key metrics effortlessly.",
     imageSrc: "/feature6.jpg",
   },
 ];

@@ -46,7 +46,7 @@ export default function SpotlightCard({
     <Card
       {...props}
       ref={cardRef}
-      className="group relative w-full bg-zinc-950 shadow-large"
+      className="group relative w-full bg-zinc-950 shadow-large font-roboto"
       radius="lg"
       onMouseMove={onMouseMove}
     >
@@ -75,7 +75,7 @@ export default function SpotlightCard({
           }}
         />
       </LazyMotion>
-      <CardHeader className="relative h-60 p-0">
+      <CardHeader className="relative h-[12.5rem] p-0">
         <Image
           removeWrapper
           alt={imageAlt}
@@ -88,10 +88,10 @@ export default function SpotlightCard({
           }}
         />
       </CardHeader>
-      <CardBody className="px-6 pb-8 pt-4">
+      <CardBody className="px-6 pb-8 pt-4 font-light ">
         <div className="flex flex-col gap-2">
-          <p className="text-xl text-neutral-300">{heading}</p>
-          <p className="text-small text-neutral-400">{content}</p>
+          <p className="text-lg font-semibold text-neutral-300">{heading}</p>
+          <p className="text-small text-neutral-400 ">{content}</p>
         </div>
       </CardBody>
     </Card>
