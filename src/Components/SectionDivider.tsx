@@ -1,10 +1,9 @@
 "use client";
 import { cn } from "@heroui/theme";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 export default function SectionDivider({ className }: { className?: string }) {
   const dividerRef = useRef<HTMLDivElement>(null);
-  const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
     if (!dividerRef.current) return;
@@ -18,7 +17,6 @@ export default function SectionDivider({ className }: { className?: string }) {
 
       // Only update the gradient if mouse is within reasonable distance
       if (distanceFromDivider < 300) {
-        setIsActive(true);
         const gradientPosition = ((x - rect.left) / rect.width) * 100;
         divider.style.background = `
           linear-gradient(
@@ -32,27 +30,24 @@ export default function SectionDivider({ className }: { className?: string }) {
             transparent 100%
           )
         `;
-      } else {
-        setIsActive(false);
       }
     };
 
     const handleMouseLeave = () => {
-      // Reset to brilliant white gradient when mouse leaves
+      // Reset to default gradient when mouse leaves
       divider.style.background = `
         linear-gradient(
           90deg, 
           transparent 0%, 
-          rgba(255, 255, 255, 0.5) 30%, 
-          rgba(255, 255, 255, 1) 50%, 
-          rgba(255, 255, 255, 0.5) 70%, 
+          rgba(255, 255, 255, 0.07) 30%, 
+          rgba(255, 255, 255, 0.13) 50%, 
+          rgba(255, 255, 255, 0.07) 70%, 
           transparent 100%
         )
       `;
-      setIsActive(false);
     };
 
-    // Apply default brilliant white gradient initially
+    // Apply default gradient initially
     handleMouseLeave();
 
     window.addEventListener("mousemove", handleMouseMove);
@@ -69,8 +64,7 @@ export default function SectionDivider({ className }: { className?: string }) {
       <div
         ref={dividerRef}
         className={cn(
-          "w-full max-w-2xl transition-all duration-300 ease-out",
-          isActive ? "h-[2px]" : "h-[1px]"
+          "w-full h-[2px] max-w-2xl transition-all duration-300 ease-out"
         )}
       />
     </div>

@@ -4,6 +4,7 @@ import Hero from "@/Sections/Hero";
 import Features from "@/Sections/Features";
 import SectionDivider from "@/Components/SectionDivider";
 import Integrations from "@/Sections/Integrations";
+import Pricing from "@/Sections/Pricing";
 
 export default function Home() {
   return (
@@ -17,6 +18,8 @@ export default function Home() {
       <Features />
       <SectionDivider className="z-10" />
       <Integrations />
+      <SectionDivider className="z-10" />
+      <Pricing /> 
     </main>
   );
 }
