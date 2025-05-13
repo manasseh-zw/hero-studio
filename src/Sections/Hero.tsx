@@ -2,7 +2,8 @@ import HeroAvatarGroup from "@/Components/HeroAvatarGroup";
 import Ticker from "@/Components/Ticker";
 import { logos } from "@/data/logos";
 import { Button } from "@heroui/button";
-import { ArrowRight } from "lucide-react";
+import { Play } from "lucide-react";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -22,35 +23,39 @@ export default function Hero() {
           The AI-powered platform for building production-ready apps <br />
           faster, smarter, and without limits.
         </p>
-        <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
+        <div className="flex flex-col items-center justify-center mt-2 gap-6 sm:flex-row">
           <Button
             size="lg"
             color="primary"
-            className="bg-default-foreground font-bold leading-5 text-background"
+            className="bg-default-foreground font-bold leading-5 text-background h-14"
             radius="full"
           >
             Get Started
           </Button>
-          <Button
-            size="lg"
-            className="border-1 border-default-100 font-medium leading-5"
-            endContent={<ArrowRight size={20} />}
-            radius="full"
-            variant="bordered"
+          <Link
+            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            See our plans
-          </Button>
+            <Button
+              size="lg"
+              className="border border-default-200  font-medium leading-5 rounded-full h-14"
+              variant="bordered"
+              endContent={<Play size={20} className="ml-2" />}
+            >
+              Watch Demo
+            </Button>
+          </Link>
         </div>
       </section>
-
       <div className="pointer-events-none absolute inset-0 top-[-40%] z-10 scale-150 select-none sm:scale-125">
         <img
-          className="pointer-events-none object-cover absolute"
+          className="pointer-events-none  object-cover absolute saturate-[85%] "
           src="bg.jpeg"
           alt="background image"
         />
       </div>
-p
+      p
       <div className="w-full z-10">
         <Ticker
           shouldPauseOnHover

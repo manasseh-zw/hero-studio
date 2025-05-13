@@ -1,6 +1,8 @@
 import AppNavbar from "@/Components/Navbar";
 import Showcase from "@/Sections/Showcase";
 import Hero from "@/Sections/Hero";
+import Features from "@/Sections/Features";
+import SectionDivider from "@/Components/SectionDivider";
 
 export default function Home() {
   return (
@@ -10,6 +12,8 @@ export default function Home() {
         <Hero />
       </div>
       <Showcase />
+      <SectionDivider className="z-10" />
+      <Features />
     </main>
   );
 }

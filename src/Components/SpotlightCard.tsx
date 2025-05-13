@@ -10,7 +10,21 @@ import {
 } from "framer-motion";
 import React from "react";
 
-export default function SpotlightCard(props: CardProps) {
+interface SpotlightCardProps extends CardProps {
+  heading?: string;
+  content?: string;
+  imageSrc?: string;
+  imageAlt?: string;
+}
+
+export default function SpotlightCard({
+  heading = "Get started with Acme Planner",
+  content = "Outline, monitor, and deliver extensive work elements from inception to completion using project management and strategic roadmaps.",
+  // imageSrc = "https://nextuipro.nyc3.cdn.digitaloceanspaces.com/components-images/calendar.png",
+  imageSrc = "/feature6.jpg",
+  imageAlt = "Acme Planner",
+  ...props
+}: SpotlightCardProps) {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
@@ -32,30 +46,41 @@ export default function SpotlightCard(props: CardProps) {
     <Card
       {...props}
       ref={cardRef}
-      className="group relative w-[400px] bg-zinc-900 shadow-large"
+      className="group relative w-full bg-zinc-950 shadow-large"
       radius="lg"
       onMouseMove={onMouseMove}
     >
       <LazyMotion features={domAnimation}>
         <m.div
-          className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-250 group-hover:opacity-100"
+          className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-250 group-hover:opacity-100 z-10"
           style={{
+            // background: useMotionTemplate`
+            //   radial-gradient(
+            //     350px circle at ${mouseX}px ${mouseY}px,
+            //     rgba(220, 38, 107, 0.2),
+            //     rgba(120, 40, 140, 0.2) 40%,
+            //     rgba(40, 15, 60, 0.1) 65%,
+            //     transparent 80%
+            //   )
+            // `,
             background: useMotionTemplate`
-              radial-gradient(
-                450px circle at ${mouseX}px ${mouseY}px,
-                rgba(120, 40, 200, 0.2),
-                transparent 80%
-              )
-            `, // <- Add your own color here
+            radial-gradient(
+              450px circle at ${mouseX}px ${mouseY}px,
+              rgba(200, 120, 150, 0.15),
+              rgba(120, 80, 120, 0.12) 40%,
+              rgba(60, 40, 80, 0.08) 65%,
+              transparent 90%
+            )
+          `,
           }}
         />
       </LazyMotion>
       <CardHeader className="relative h-60 p-0">
         <Image
           removeWrapper
-          alt="Acme Planner"
-          className="h-full object-cover"
-          src="https://nextuipro.nyc3.cdn.digitaloceanspaces.com/components-images/calendar.png"
+          alt={imageAlt}
+          className="h-full w-full object-cover bg-blend-darken"
+          src={imageSrc}
           style={{
             // @ts-ignore
             "-webkit-mask-image":
@@ -65,13 +90,8 @@ export default function SpotlightCard(props: CardProps) {
       </CardHeader>
       <CardBody className="px-6 pb-8 pt-4">
         <div className="flex flex-col gap-2">
-          <p className="text-xl text-neutral-50">
-            Get started with Acme Planner
-          </p>
-          <p className="text-small text-neutral-400">
-            Outline, monitor, and deliver extensive work elements from inception
-            to completion using project management and strategic roadmaps.
-          </p>
+          <p className="text-xl text-neutral-300">{heading}</p>
+          <p className="text-small text-neutral-400">{content}</p>
         </div>
       </CardBody>
     </Card>

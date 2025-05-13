@@ -1,7 +1,7 @@
 export const Logo1 = (
   <svg
     fill="none"
-    height="28"
+    height="30"
     viewBox="0 0 168 41"
     width="168"
     xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +72,7 @@ export const Logo1 = (
 export const Logo2 = (
   <svg
     fill="none"
-    height="28"
+    height="30"
     id="logo-52"
     viewBox="0 0 170 41"
     width="170"
@@ -126,7 +126,7 @@ export const Logo2 = (
 export const Logo3 = (
   <svg
     fill="none"
-    height="28"
+    height="30"
     id="logo-54"
     viewBox="0 0 170 41"
     width="170"
@@ -180,7 +180,7 @@ export const Logo3 = (
 export const Logo4 = (
   <svg
     fill="none"
-    height="28"
+    height="30"
     id="logo-51"
     viewBox="0 0 167 41"
     width="167"
@@ -234,7 +234,7 @@ export const Logo4 = (
 export const Logo5 = (
   <svg
     fill="none"
-    height="28"
+    height="30"
     id="logo-32"
     viewBox="0 0 150 57"
     width="150"
@@ -268,7 +268,7 @@ export const Logo5 = (
 export const Logo6 = (
   <svg
     fill="none"
-    height="28"
+    height="30"
     id="logo-8"
     viewBox="0 0 140 30"
     width="140"
@@ -329,7 +329,7 @@ export const Logo6 = (
 export const Logo7 = (
   <svg
     fill="none"
-    height="28"
+    height="30"
     viewBox="0 0 152 19"
     width="152"
     xmlns="http://www.w3.org/2000/svg"
@@ -344,7 +344,7 @@ export const Logo7 = (
 export const Logo8 = (
   <svg
     fill="none"
-    height="28"
+    height="30"
     viewBox="0 0 100 51"
     width="100"
     xmlns="http://www.w3.org/2000/svg"
@@ -407,7 +407,7 @@ export const Logo8 = (
 export const Logo9 = (
   <svg
     fill="none"
-    height="28"
+    height="30"
     viewBox="0 0 119 30"
     width="119"
     xmlns="http://www.w3.org/2000/svg"
@@ -422,7 +422,7 @@ export const Logo9 = (
 export const Logo10 = (
   <svg
     fill="none"
-    height="28"
+    height="30"
     viewBox="0 0 160 30"
     width="160"
     xmlns="http://www.w3.org/2000/svg"
