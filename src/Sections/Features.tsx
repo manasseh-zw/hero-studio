@@ -3,7 +3,7 @@ import { AppFeatures } from "@/data/features";
 
 export default function Features() {
   return (
-    <div className="py-14 pt-16">
+    <div className="py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 space-y-8">
           <div className="text-center font-roboto font-bold leading-[1.2] tracking-tight text-[40px]">

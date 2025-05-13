@@ -11,7 +11,7 @@ import {
   Logo10,
 } from "@/Components/MockLogos";
 
-export const logos = [
+export const brandLogos = [
   {
     key: "logo-1",
     logo: Logo1,

@@ -1,7 +1,6 @@
 import HeroAvatarGroup from "@/Components/HeroAvatarGroup";
 import Ticker from "@/Components/Ticker";
-import SubtleGlow from "@/Components/SubtleGlow";
-import { logos } from "@/data/logos";
+import { brandLogos } from "@/data/logos";
 import { Button } from "@heroui/button";
 import { Play } from "lucide-react";
 import Link from "next/link";
@@ -10,17 +9,20 @@ export default function Hero() {
   return (
     <main className="container mx-auto flex min-h-screen flex-col space-y-28  overflow-hidden px-8 py-16">
       <section className="z-20 flex flex-col items-center justify-center gap-[20px] sm:gap-6 mt-28 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/10 rounded-3xl blur-2xl -z-10" />
+        <div className="absolute w-[90%] h-[80%] top-[10%] left-[5%] bg-black/15 rounded-full blur-2xl -z-10" />
+
         <div>
           <HeroAvatarGroup />
         </div>
-        <div className="text-center font-roboto font-extrabold leading-[1.1] text-[64px]">
-          <div className="bg-hero-section-title bg-clip-text text-transparent">
+
+        <div className="text-center font-roboto font-semibold leading-[1.1] text-[64px] relative">
+          <div className="bg-hero-section-title bg-clip-text text-transparent drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">
             Manage Projects Smarter <br />{" "}
             <span className="text-[60px]">And Deliver Faster.</span>
           </div>
         </div>
-        <p className="text-center  leading-7 text-default-600 text-pretty sm:w-[600px] sm:text-[16px]">
+
+        <p className="text-center leading-7 text-default-600 text-pretty sm:w-[600px] sm:text-[16px] drop-shadow-sm relative z-10 px-4">
           The AI-powered platform for seamless project management, intelligent
           automation, and real-time team collaboration.
         </p>
@@ -41,7 +43,7 @@ export default function Hero() {
           >
             <Button
               size="lg"
-              className="border border-default-200  font-medium leading-5 rounded-full h-14"
+              className="border border-default-200 font-medium leading-5 rounded-full h-14"
               variant="bordered"
               endContent={<Play size={20} className="ml-2" />}
             >
@@ -65,7 +67,7 @@ export default function Hero() {
           className="z-10 opacity-45"
           isReverse={false}
         >
-          {logos.map(({ key, logo }) => (
+          {brandLogos.map(({ key, logo }) => (
             <div
               key={key}
               className="flex items-center justify-center text-foreground"

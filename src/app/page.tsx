@@ -3,6 +3,7 @@ import Showcase from "@/Sections/Showcase";
 import Hero from "@/Sections/Hero";
 import Features from "@/Sections/Features";
 import SectionDivider from "@/Components/SectionDivider";
+import Integrations from "@/Sections/Integrations";
 
 export default function Home() {
   return (
@@ -14,6 +15,8 @@ export default function Home() {
       <Showcase />
       <SectionDivider className="z-10" />
       <Features />
+      <SectionDivider className="z-10" />
+      <Integrations />
     </main>
   );
 }
