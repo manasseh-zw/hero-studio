@@ -23,10 +23,10 @@ export const theme = {
       "scrolling-banner-vertical":
         "scrolling-banner-vertical var(--duration) linear infinite",
     },
-      backgroundImage: {
-        "hero-section-title":
-          "linear-gradient(91deg, #FFF 32.88%, rgba(255, 255, 255, 0.40) 99.12%)",
-      },
+    backgroundImage: {
+      "hero-section-title":
+        "linear-gradient(91deg, #FFF 32.88%, rgba(255, 255, 255, 0.40) 99.12%)",
+    },
   },
 
   fontFamily: {
@@ -235,7 +235,7 @@ export const plugins = [
             foreground: "#000",
             DEFAULT: "#f31260",
           },
-          background: "#000000",
+          background: "#08090A",
           foreground: "#ffffff",
           content1: {
             DEFAULT: "#18181b",

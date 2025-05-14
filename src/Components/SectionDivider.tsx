@@ -22,11 +22,11 @@ export default function SectionDivider({ className }: { className?: string }) {
           linear-gradient(
             90deg, 
             transparent 0%, 
-            rgba(60, 40, 80, 0.1) ${Math.max(0, gradientPosition - 40)}%, 
-            rgba(120, 80, 120, 0.2) ${Math.max(0, gradientPosition - 20)}%, 
-            rgba(200, 120, 150, 0.3) ${gradientPosition}%, 
-            rgba(120, 80, 120, 0.2) ${Math.min(100, gradientPosition + 20)}%, 
-            rgba(60, 40, 80, 0.1) ${Math.min(100, gradientPosition + 40)}%, 
+            rgba(80, 40, 140, 0.1) ${Math.max(0, gradientPosition - 40)}%, 
+            rgba(120, 60, 200, 0.2) ${Math.max(0, gradientPosition - 20)}%, 
+            rgba(160, 80, 240, 0.4) ${gradientPosition}%, 
+            rgba(120, 60, 200, 0.2) ${Math.min(100, gradientPosition + 20)}%, 
+            rgba(80, 40, 140, 0.1) ${Math.min(100, gradientPosition + 40)}%, 
             transparent 100%
           )
         `;
@@ -34,14 +34,16 @@ export default function SectionDivider({ className }: { className?: string }) {
     };
 
     const handleMouseLeave = () => {
-      // Reset to default gradient when mouse leaves
+      // Reset to a centered purple gradient when mouse leaves
       divider.style.background = `
         linear-gradient(
           90deg, 
           transparent 0%, 
-          rgba(255, 255, 255, 0.07) 30%, 
-          rgba(255, 255, 255, 0.13) 50%, 
-          rgba(255, 255, 255, 0.07) 70%, 
+          rgba(80, 40, 140, 0.1) 30%, 
+          rgba(120, 60, 200, 0.2) 40%, 
+          rgba(160, 80, 240, 0.4) 50%, 
+          rgba(120, 60, 200, 0.2) 60%, 
+          rgba(80, 40, 140, 0.1) 70%, 
           transparent 100%
         )
       `;

@@ -44,20 +44,6 @@ export default function Pricing() {
           }}
         />
       </div>
-      <div
-        aria-hidden="true"
-        className="px:5 absolute inset-x-0 top-3 z-0 h-full w-full transform-gpu overflow-hidden blur-3xl md:right-20 md:h-auto md:w-auto md:px-36"
-      >
-        <div
-          className="mx-auto aspect-[1155/678] w-[72.1875rem] opacity-30"
-          style={{
-            background:
-              "linear-gradient(to top right, rgba(60, 40, 80, 0.8), rgba(120, 80, 120, 0.8), rgba(200, 120, 150, 0.8))",
-            clipPath:
-              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-          }}
-        />
-      </div>
       <div className="flex max-w-xl flex-col text-center gap-8">
         <div className="text-center font-roboto font-bold leading-[1.2] tracking-tight text-[40px]">
           <div className="bg-hero-section-title bg-clip-text text-transparent">
@@ -103,10 +89,10 @@ export default function Pricing() {
           <Card
             key={tier.key}
             isBlurred
-            className={cn("bg-zinc/60 p-3 dark:bg-default-100/50", {
+            className={cn("bg-zinc/60 p-3 border-1 border-zinc-900", {
               "!border-small border-secondary/50": tier.mostPopular,
             })}
-            shadow="md"
+            shadow="lg"
           >
             {tier.mostPopular ? (
               <Chip

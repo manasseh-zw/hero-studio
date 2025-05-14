@@ -20,7 +20,6 @@ interface SpotlightCardProps extends CardProps {
 export default function SpotlightCard({
   heading = "Get started with Acme Planner",
   content = "Outline, monitor, and deliver extensive work elements from inception to completion using project management and strategic roadmaps.",
-  // imageSrc = "https://nextuipro.nyc3.cdn.digitaloceanspaces.com/components-images/calendar.png",
   imageSrc = "/feature6.jpg",
   imageAlt = "Acme Planner",
   ...props
@@ -46,36 +45,27 @@ export default function SpotlightCard({
     <Card
       {...props}
       ref={cardRef}
-      className="group relative w-full bg-zinc-950 shadow-large font-roboto"
+      className="group relative w-full bg-zinc-900 shadow-large font-roboto"
       radius="lg"
       onMouseMove={onMouseMove}
     >
+      {/* Spotlight effect */}
       <LazyMotion features={domAnimation}>
         <m.div
-          className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-250 group-hover:opacity-100 z-10"
+          className="pointer-events-none absolute inset-0 z-0 opacity-0 transition duration-300 group-hover:opacity-100"
           style={{
-            // background: useMotionTemplate`
-            //   radial-gradient(
-            //     350px circle at ${mouseX}px ${mouseY}px,
-            //     rgba(220, 38, 107, 0.2),
-            //     rgba(120, 40, 140, 0.2) 40%,
-            //     rgba(40, 15, 60, 0.1) 65%,
-            //     transparent 80%
-            //   )
-            // `,
             background: useMotionTemplate`
-            radial-gradient(
-              450px circle at ${mouseX}px ${mouseY}px,
-              rgba(200, 120, 150, 0.15),
-              rgba(120, 80, 120, 0.12) 40%,
-              rgba(60, 40, 80, 0.08) 65%,
-              transparent 90%
-            )
-          `,
+              radial-gradient(
+                350px circle at ${mouseX}px ${mouseY}px,
+                rgba(120, 40, 200, 0.2),
+                rgba(80, 40, 140, 0.08) 40%,
+                rgba(0, 0, 0, 0) 70%
+              )
+            `,
           }}
         />
       </LazyMotion>
-      <CardHeader className="relative h-[12.5rem] p-0">
+      <CardHeader className="relative h-[10.5rem] p-0">
         <Image
           removeWrapper
           alt={imageAlt}
@@ -88,10 +78,10 @@ export default function SpotlightCard({
           }}
         />
       </CardHeader>
-      <CardBody className="px-6 pb-8 pt-4 font-light ">
+      <CardBody className="px-6 pb-8 pt-4 font-light">
         <div className="flex flex-col gap-2">
-          <p className="text-lg font-semibold text-neutral-300">{heading}</p>
-          <p className="text-small text-neutral-400 ">{content}</p>
+          <p className="text font-semibold text-neutral-300">{heading}</p>
+          <p className="text-small text-gray-400">{content}</p>
         </div>
       </CardBody>
     </Card>

@@ -3,7 +3,7 @@ import { AppFeatures } from "@/data/features";
 
 export default function Features() {
   return (
-    <div className="py-16">
+    <div className="py-14">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 space-y-8">
           <div className="text-center font-roboto font-bold leading-[1.2] tracking-tight text-[40px]">
@@ -18,8 +18,8 @@ export default function Features() {
           </p>
         </div>
 
-        <div className="mx-auto mt-14 max-w-6xl px-1  sm:mt-20 md:mt-24 md:px-2 lg:px-6">
-            <dl className="mx-auto grid max-w-4xl grid-cols-1 gap-8 text-base leading-7 text-gray-300 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        <div className="mx-auto mt-14 max-w-5xl px-1  sm:mt-20 md:mt-24 md:px-2 lg:px-6">
+          <dl className="mx-auto grid max-w-4xl grid-cols-1 gap-8 text-base leading-7 text-gray-300 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             {AppFeatures.map((feature) => (
               <div key={feature.name} className="flex justify-center">
                 <SpotlightCard
