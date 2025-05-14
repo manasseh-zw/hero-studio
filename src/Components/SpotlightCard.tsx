@@ -64,7 +64,7 @@ export default function SpotlightCard({
           }}
         />
       </LazyMotion>
-      <CardHeader className="relative h-[10.9rem] p-0">
+      <CardHeader className="relative h-[10.9rem] lg:h-[10.2rem] p-0">
         <Image
           removeWrapper
           alt={imageAlt}

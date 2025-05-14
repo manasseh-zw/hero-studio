@@ -16,6 +16,7 @@ import {
 } from "@heroui/react";
 import Logo from "./Logo";
 import type { NavbarProps } from "@heroui/react";
+import { Menu } from "lucide-react";
 
 const navItems = [
   { name: "Features", href: "#features" },
@@ -56,7 +57,7 @@ export default function AppNavbar(props: NavbarProps) {
         className={cn(
           "max-w-full rounded-full bg-transparent transition-all duration-500 ease-in-out font-roboto border-1 border-zinc-700 border-opacity-0   ",
           scrolled
-            ? "bg-zinc-900 bg-opacity-70 h-14 backdrop-blur-md shadow-zinc-900/20 border-1 border-zinc-600 border-opacity-20 shadow-lg max-w-5xl px-3 py-2"
+            ? "bg-zinc-900 bg-opacity-70 h-14 backdrop-blur-md shadow-zinc-900/20 border-1 border-zinc-600 border-opacity-20 shadow-lg max-w-5xl px-1 py-2"
             : "h-16 backdrop-blur-none max-w-6xl"
         )}
         classNames={{
@@ -128,22 +129,8 @@ export default function AppNavbar(props: NavbarProps) {
               variant="light"
               onPress={() => setIsMenuOpen(true)}
               className="text-default-400"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-6 h-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
-              </svg>
-            </Button>
+              endContent={<Menu className="text-white/70" />}
+            ></Button>
           </NavbarItem>
         </NavbarContent>
 
@@ -151,12 +138,13 @@ export default function AppNavbar(props: NavbarProps) {
           isOpen={isMenuOpen}
           onClose={() => setIsMenuOpen(false)}
           placement="center"
+          className="mb-10"
           classNames={{
             base: "bg-black/70 backdrop-blur-xl",
             header: "border-b border-white/10",
             body: "py-6",
             closeButton: "text-white/70 hover:text-white",
-            backdrop: "bg-black/40 backdrop-blur-sm",
+            backdrop: "bg-black/40 backdrop-blur-xl",
           }}
           motionProps={{
             variants: {
@@ -198,7 +186,7 @@ export default function AppNavbar(props: NavbarProps) {
                   {navItems.map((item) => (
                     <div key={item.name}>
                       <Link
-                        className="block w-full py-3 text-white/70 hover:text-white"
+                        className="block w-full py-3 text-white/80 hover:text-white"
                         href={item.href}
                         onClick={() => setIsMenuOpen(false)}
                       >

@@ -7,12 +7,12 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <main className="relative h-full overflow-hidden">
+    <main className="relative  overflow-hidden">
       {/* Background overlay with specific color */}
       <div className="absolute inset-0 bg-[#08090A]/85 mix-blend-multiply" />
 
-      {/* Gradient transition to bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-[#08090A] to-transparent z-10" />
+      {/* Gradient transition to bottom - MODIFIED for smoother transition */}
+      <div className="absolute bottom-0 left-0 right-0 h-72 sm:h-96 bg-gradient-to-t from-[#08090A] via-[#08090A]/70 to-transparent z-10" />
 
       {/* Left gradient blob */}
       <div
@@ -70,7 +70,7 @@ export default function Hero() {
 
           <p className="text-center leading-7 text-white/60 font-roboto text-sm sm:text-base max-w-[280px] sm:max-w-[500px] relative z-10 px-2 sm:px-4">
             The AI-powered platform for seamless project management, smart
-            automation, and real-time team collaboration.
+            automation.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center mt-6 sm:mt-8 gap-3 sm:gap-4 w-full sm:w-auto px-4 sm:px-0">
@@ -106,7 +106,7 @@ export default function Hero() {
             <Ticker
               shouldPauseOnHover
               gap="20px"
-              className="z-10 opacity-40"
+              className="z-10 opacity-50"
               isReverse={false}
             >
               {brandLogos.map(({ key, logo }) => (
