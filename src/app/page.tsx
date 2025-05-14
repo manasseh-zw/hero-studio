@@ -7,6 +7,8 @@ import Integrations from "@/Sections/Integrations";
 import Pricing from "@/Sections/Pricing";
 import Testimonial from "@/Sections/Testimonial";
 import FAQs from "@/Sections/FAQs";
+import Blog from "@/Sections/Blog";
+import Footer from "@/Sections/Footer";
 
 export default function Home() {
   return (
@@ -25,6 +27,9 @@ export default function Home() {
       <SectionDivider className="z-10" />
       <Testimonial />
       <FAQs />
+      <SectionDivider className="z-10" />
+      <Blog />
+      <Footer />
     </main>
   );
 }
