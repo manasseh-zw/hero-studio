@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <main className="relative min-h-screen overflow-hidden">
+    <main className="relative h-full overflow-hidden">
       {/* Background overlay with specific color */}
       <div className="absolute inset-0 bg-[#08090A]/85 mix-blend-multiply" />
 
@@ -54,7 +54,7 @@ export default function Hero() {
 
       {/* Content container */}
       <div className="container mx-auto flex flex-col space-y-16 sm:space-y-28 px-4 sm:px-8 py-12 sm:py-16">
-        <section className="z-20 flex flex-col items-center justify-center gap-4 sm:gap-6 mt-16 sm:mt-24 relative">
+        <section className="z-20 flex flex-col items-center justify-center gap-4 sm:gap-6 mt-20 sm:mt-24 relative">
           <div className="absolute w-[90%] h-[80%] top-[10%] left-[5%] bg-black/15 rounded-full blur-2xl -z-10" />
 
           <div>

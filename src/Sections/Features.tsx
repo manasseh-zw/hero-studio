@@ -19,7 +19,11 @@ export default function Features() {
         </div>
 
         <div className="mx-auto mt-10 sm:mt-14 md:mt-20 max-w-5xl">
-          <dl className="mx-auto grid max-w-4xl grid-cols-1 gap-6 sm:gap-8 text-base leading-7 text-gray-300 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          <dl
+            className="mx-auto grid max-w-4xl grid-cols-1 gap-6 sm:gap-8 text-base leading-7 text-gray-300 sm:grid-cols-2 
+          px-3 lg:px-0
+          lg:mx-0 lg:max-w-none lg:grid-cols-3 "
+          >
             {AppFeatures.map((feature) => (
               <div key={feature.name} className="flex justify-center">
                 <SpotlightCard
