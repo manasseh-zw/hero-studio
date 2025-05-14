@@ -172,11 +172,10 @@ export default function AppNavbar(props: NavbarProps) {
               <div className="space-y-6">
                 <div className="flex flex-col gap-3">
                   <Button
-                    fullWidth
-                    as={Link}
-                    className="bg-white font-bold text-black"
-                    href="/#"
+                    size="lg"
                     radius="lg"
+                    color="primary"
+                    className="bg-gradient-to-r from-pink-100 via-teal-100 to-purple-200 text-black font-medium border-none hover:scale-105 active:scale-95 transition-transform shadow-lg w-full "
                   >
                     Get Started
                   </Button>

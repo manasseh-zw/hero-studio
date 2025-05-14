@@ -52,7 +52,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Content container */}
       <div className="container mx-auto flex flex-col space-y-16 sm:space-y-28 px-4 sm:px-8 py-12 sm:py-16">
         <section className="z-20 flex flex-col items-center justify-center gap-4 sm:gap-6 mt-20 sm:mt-24 relative">
           <div className="absolute w-[90%] h-[80%] top-[10%] left-[5%] bg-black/15 rounded-full blur-2xl -z-10" />
@@ -62,23 +61,23 @@ export default function Hero() {
           </div>
 
           <div className="text-center font-roboto font-extrabold leading-[1.1] mt-2">
-            <div className="bg-hero-section-title bg-clip-text text-transparent text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+            <div className="bg-gradient-to-r from-pink-100 via-teal-100 to-purple-200 bg-clip-text text-transparent text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
               Manage Projects Smarter <br className="hidden sm:block" />
               <span>And Deliver Faster.</span>
             </div>
           </div>
 
-          <p className="text-center leading-7 text-white/60 font-roboto text-sm sm:text-base max-w-[280px] sm:max-w-[500px] relative z-10 px-2 sm:px-4">
+          <p className="text-center leading-7 bg-gradient-to-r from-pink-200 via-white to-purple-300 bg-clip-text text-transparent  font-roboto text-sm sm:text-base max-w-[280px] sm:max-w-[500px] relative z-10 px-2 sm:px-4">
             The AI-powered platform for seamless project management, smart
             automation.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center mt-6 sm:mt-8 gap-3 sm:gap-4 w-full sm:w-auto px-4 sm:px-0">
+          <div className="flex flex-col sm:flex-row items-center justify-center mt-6 sm:mt-8 gap-3 sm:gap-4 w-full max-w-xs sm:max-w-none mx-auto">
             <Button
               size="lg"
               radius="lg"
               color="primary"
-              className="bg-gradient-to-r from-pink-100 via-teal-100 to-purple-200 text-black font-medium border-none hover:scale-105 active:scale-95 transition-transform shadow-lg"
+              className="bg-gradient-to-r from-pink-100 via-teal-100 to-purple-200 text-black font-medium border-none hover:scale-105 active:scale-95 transition-transform shadow-lg w-full sm:w-auto"
             >
               Get Started
             </Button>
@@ -92,7 +91,7 @@ export default function Hero() {
               <Button
                 size="lg"
                 radius="lg"
-                className="w-full sm:w-auto border border-white/30 font-medium leading-5 "
+                className="w-full sm:w-auto border border-white/30 font-medium leading-5"
                 variant="bordered"
                 endContent={<Play size={20} className="ml-2" />}
               >
