@@ -49,7 +49,6 @@ export default function SpotlightCard({
       radius="lg"
       onMouseMove={onMouseMove}
     >
-      {/* Spotlight effect */}
       <LazyMotion features={domAnimation}>
         <m.div
           className="pointer-events-none absolute inset-0 z-0 opacity-0 transition duration-300 group-hover:opacity-100"
@@ -65,7 +64,7 @@ export default function SpotlightCard({
           }}
         />
       </LazyMotion>
-      <CardHeader className="relative h-[10.7rem] p-0">
+      <CardHeader className="relative h-[10.9rem] p-0">
         <Image
           removeWrapper
           alt={imageAlt}

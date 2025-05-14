@@ -5,7 +5,7 @@ import { harper, manrope, roboto } from "./font";
 
 export const metadata: Metadata = {
   title: "Hero Studio",
-  description: "AI App Builder",
+  description: "AI Powered Project Management",
 };
 
 export default function RootLayout({
@@ -15,6 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="apple-mobile-web-app-title" content="Hero Studio" />
+      </head>
       <body
         className={`
         ${manrope.variable} 
