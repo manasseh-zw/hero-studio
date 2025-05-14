@@ -26,8 +26,8 @@ export default function Home() {
       <Pricing />
       <SectionDivider className="z-10" />
       <Testimonial />
+      <SectionDivider className="z-10 hidden sm:flex" />
       <FAQs />
-      <SectionDivider className="z-10" />
       <Blog />
       <Footer />
     </main>
