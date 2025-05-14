@@ -17,8 +17,9 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`
-        ${manrope.className} ${manrope.variable} 
+        ${manrope.variable} 
         ${roboto.variable} 
+        ${roboto.className} 
         ${harper.variable} 
         antialiased
         `}

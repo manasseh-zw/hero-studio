@@ -5,12 +5,11 @@ export default function HeroAvatarGroup() {
   return (
     <div className="p-2 px-4 bg-zinc-600 bg-opacity-20 border-1 border-opacity-30 border-zinc-800 backdrop-blur-sm rounded-full shadow-sm">
       <AvatarGroup
-        color="primary"
         size="sm"
         max={4}
         renderCount={() => (
           <p className="text-small cursor-pointer text-foreground font-medium ms-2">
-            Join <span className="">1000+</span> Builders.
+            Join 1000+ Builders.
           </p>
         )}
         total={10}

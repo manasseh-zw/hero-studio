@@ -29,7 +29,7 @@ export default function Pricing() {
   };
 
   return (
-    <div className="relative flex mx-auto max-w-4xl flex-col items-center py-20">
+    <section id="pricing" className="relative flex mx-auto max-w-4xl flex-col items-center py-16">
       <div
         aria-hidden="true"
         className="px:5 absolute inset-x-0 top-3 z-0 h-full w-full transform-gpu overflow-hidden blur-3xl md:right-20 md:h-auto md:w-auto md:px-36"
@@ -84,7 +84,7 @@ export default function Pricing() {
         <Tab key={FrequencyEnum.Quarterly} title="Pay Quarterly" />
       </Tabs>
       <Spacer y={12} />
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 mx-4 ">
         {tiers.map((tier) => (
           <Card
             key={tier.key}
@@ -145,6 +145,6 @@ export default function Pricing() {
           </Card>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

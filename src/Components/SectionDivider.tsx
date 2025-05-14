@@ -15,7 +15,6 @@ export default function SectionDivider({ className }: { className?: string }) {
       const x = e.clientX - window.scrollX;
       const distanceFromDivider = Math.abs(x - (rect.left + rect.width / 2));
 
-      // Only update the gradient if mouse is within reasonable distance
       if (distanceFromDivider < 300) {
         const gradientPosition = ((x - rect.left) / rect.width) * 100;
         divider.style.background = `
@@ -34,7 +33,6 @@ export default function SectionDivider({ className }: { className?: string }) {
     };
 
     const handleMouseLeave = () => {
-      // Reset to a centered purple gradient when mouse leaves
       divider.style.background = `
         linear-gradient(
           90deg, 
@@ -49,7 +47,6 @@ export default function SectionDivider({ className }: { className?: string }) {
       `;
     };
 
-    // Apply default gradient initially
     handleMouseLeave();
 
     window.addEventListener("mousemove", handleMouseMove);
@@ -62,11 +59,11 @@ export default function SectionDivider({ className }: { className?: string }) {
   }, []);
 
   return (
-    <div className={cn("w-full flex justify-center py-12", className)}>
+    <div className={cn("w-full flex justify-center py-8 sm:py-12", className)}>
       <div
         ref={dividerRef}
         className={cn(
-          "w-full h-[2px] max-w-2xl transition-all duration-300 ease-out"
+          "w-full h-[1px] sm:h-[2px] max-w-[280px] sm:max-w-2xl transition-all duration-300 ease-out"
         )}
       />
     </div>

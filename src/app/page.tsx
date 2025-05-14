@@ -5,6 +5,8 @@ import Features from "@/Sections/Features";
 import SectionDivider from "@/Components/SectionDivider";
 import Integrations from "@/Sections/Integrations";
 import Pricing from "@/Sections/Pricing";
+import Testimonial from "@/Sections/Testimonial";
+import FAQs from "@/Sections/FAQs";
 
 export default function Home() {
   return (
@@ -19,7 +21,10 @@ export default function Home() {
       <SectionDivider className="z-10" />
       <Integrations />
       <SectionDivider className="z-10" />
-      <Pricing /> 
+      <Pricing />
+      <SectionDivider className="z-10" />
+      <Testimonial />
+      <FAQs />
     </main>
   );
 }

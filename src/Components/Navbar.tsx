@@ -6,25 +6,23 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  NavbarMenuItem,
-  NavbarMenuToggle,
   Link,
   Button,
+  Modal,
+  ModalContent,
+  ModalBody,
   Divider,
   cn,
 } from "@heroui/react";
 import Logo from "./Logo";
 import type { NavbarProps } from "@heroui/react";
 
-const menuItems = [
-  "About",
-  "Blog",
-  "Customers",
-  "Pricing",
-  "Enterprise",
-  "Changelog",
-  "Documentation",
-  "Contact Us",
+const navItems = [
+  { name: "Features", href: "#features" },
+  { name: "Showcase", href: "#showcase" },
+  { name: "Integrations", href: "#integrations" },
+  { name: "Pricing", href: "#pricing" },
+  { name: "FAQ", href: "#faq" },
 ];
 
 export default function AppNavbar(props: NavbarProps) {
@@ -64,8 +62,6 @@ export default function AppNavbar(props: NavbarProps) {
         classNames={{
           base: "backdrop-blur-none backdrop-saturate-100",
         }}
-        isMenuOpen={isMenuOpen}
-        onMenuOpenChange={setIsMenuOpen}
       >
         {/* Logo */}
         <NavbarBrand className="transition-all duration-500">
@@ -88,28 +84,16 @@ export default function AppNavbar(props: NavbarProps) {
           )}
           justify="center"
         >
-          <NavbarItem isActive>
-            <Link
-              aria-current="page"
-              className={cn(
-                "text-default-foreground transition-all duration-500",
-                scrolled ? "text-sm" : "text-base"
-              )}
-              href="#"
-            >
-              Home
-            </Link>
-          </NavbarItem>
-          {["Features", "Customers", "About Us", "Integrations"].map((item) => (
-            <NavbarItem key={item}>
+          {navItems.map((item) => (
+            <NavbarItem key={item.name}>
               <Link
                 className={cn(
                   "text-default-500 hover:text-default-700 transition-colors duration-500",
                   scrolled ? "text-sm" : "text-base"
                 )}
-                href="#"
+                href={item.href}
               >
-                {item}
+                {item.name}
               </Link>
             </NavbarItem>
           ))}
@@ -137,27 +121,72 @@ export default function AppNavbar(props: NavbarProps) {
         </NavbarContent>
 
         {/* Mobile Menu Toggle */}
-        <NavbarMenuToggle className="text-default-400 md:hidden" />
+        <NavbarContent className="md:hidden" justify="end">
+          <NavbarItem>
+            <Button
+              isIconOnly
+              variant="light"
+              onPress={() => setIsMenuOpen(true)}
+              className="text-default-400"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </Button>
+          </NavbarItem>
+        </NavbarContent>
 
-        {/* Mobile Menu - Positioned below the navbar */}
-        {isMenuOpen && (
-          <div className="fixed top-[70px] left-0 right-0 bg-black/90 backdrop-blur-md shadow-xl rounded-b-3xl mt-2 mx-4 overflow-hidden">
-            <div className="container mx-auto px-4 py-6">
-              <div className="space-y-4">
-                <div className="flex flex-col gap-3 mb-6">
+        <Modal 
+          isOpen={isMenuOpen} 
+          onClose={() => setIsMenuOpen(false)}
+          placement="center"
+          classNames={{
+            base: "bg-black/70 backdrop-blur-xl",
+            header: "border-b border-white/10",
+            body: "py-6",
+            closeButton: "text-white/70 hover:text-white",
+            backdrop: "bg-black/40 backdrop-blur-sm",
+          }}
+          motionProps={{
+            variants: {
+              enter: {
+                y: 0,
+                opacity: 1,
+                transition: {
+                  duration: 0.3,
+                  ease: "easeOut"
+                }
+              },
+              exit: {
+                y: -20,
+                opacity: 0,
+                transition: {
+                  duration: 0.2,
+                  ease: "easeIn"
+                }
+              }
+            }
+          }}
+        >
+          <ModalContent className="p-4">
+            <ModalBody>
+              <div className="space-y-6">
+                <div className="flex flex-col gap-3">
                   <Button
                     fullWidth
                     as={Link}
-                    href="/#"
-                    variant="faded"
-                    className="text-white/80"
-                  >
-                    Sign In
-                  </Button>
-                  <Button
-                    fullWidth
-                    as={Link}
-                    className="bg-white text-black"
+                    className="bg-white font-bold text-black"
                     href="/#"
                     radius="full"
                   >
@@ -165,56 +194,24 @@ export default function AppNavbar(props: NavbarProps) {
                   </Button>
                 </div>
 
-                {/* Mobile Navigation Links */}
                 <div className="space-y-1">
-                  <NavbarMenuItem>
-                    <Link
-                      className="block w-full py-2 text-white font-medium"
-                      href="#"
-                      size="md"
-                    >
-                      Home
-                    </Link>
-                    <Divider className="opacity-30 my-1" />
-                  </NavbarMenuItem>
-
-                  {["Features", "Customers", "About Us", "Integrations"].map(
-                    (item) => (
-                      <NavbarMenuItem key={`nav-${item}`}>
-                        <Link
-                          className="block w-full py-2 text-white/70"
-                          href="#"
-                          size="md"
-                        >
-                          {item}
-                        </Link>
-                        <Divider className="opacity-30 my-1" />
-                      </NavbarMenuItem>
-                    )
-                  )}
-                </div>
-
-                {/* Additional Menu Items */}
-                <div className="mt-6 space-y-1">
-                  {menuItems.map((item, index) => (
-                    <NavbarMenuItem key={`${item}-${index}`}>
+                  {navItems.map((item) => (
+                    <div key={item.name}>
                       <Link
-                        className="block w-full py-2 text-white/70"
-                        href="#"
-                        size="md"
+                        className="block w-full py-3 text-white/70 hover:text-white"
+                        href={item.href}
+                        onClick={() => setIsMenuOpen(false)}
                       >
-                        {item}
+                        {item.name}
                       </Link>
-                      {index < menuItems.length - 1 && (
-                        <Divider className="opacity-30 my-1" />
-                      )}
-                    </NavbarMenuItem>
+                      <Divider className="opacity-30" />
+                    </div>
                   ))}
                 </div>
               </div>
-            </div>
-          </div>
-        )}
+            </ModalBody>
+          </ModalContent>
+        </Modal>
       </Navbar>
     </div>
   );
