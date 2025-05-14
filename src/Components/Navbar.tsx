@@ -54,7 +54,7 @@ export default function AppNavbar(props: NavbarProps) {
       <Navbar
         {...props}
         className={cn(
-          "max-w-full rounded-full backdrop-blur-sm transition-all duration-500 ease-in-out font-roboto border-1 border-zinc-700 border-opacity-0   ",
+          "max-w-full rounded-full bg-transparent transition-all duration-500 ease-in-out font-roboto border-1 border-zinc-700 border-opacity-0   ",
           scrolled
             ? "bg-zinc-900 bg-opacity-70 h-14 backdrop-blur-md shadow-zinc-900/20 border-1 border-zinc-600 border-opacity-20 shadow-lg max-w-5xl px-3 py-2"
             : "h-16 backdrop-blur-none max-w-6xl"
@@ -88,7 +88,7 @@ export default function AppNavbar(props: NavbarProps) {
             <NavbarItem key={item.name}>
               <Link
                 className={cn(
-                  "text-default-500 hover:text-default-700 transition-colors duration-500",
+                  "text-default-600 hover:text-default-800 transition-colors duration-500",
                   scrolled ? "text-sm" : "text-base"
                 )}
                 href={item.href}
@@ -147,8 +147,8 @@ export default function AppNavbar(props: NavbarProps) {
           </NavbarItem>
         </NavbarContent>
 
-        <Modal 
-          isOpen={isMenuOpen} 
+        <Modal
+          isOpen={isMenuOpen}
           onClose={() => setIsMenuOpen(false)}
           placement="center"
           classNames={{
@@ -165,18 +165,18 @@ export default function AppNavbar(props: NavbarProps) {
                 opacity: 1,
                 transition: {
                   duration: 0.3,
-                  ease: "easeOut"
-                }
+                  ease: "easeOut",
+                },
               },
               exit: {
                 y: -20,
                 opacity: 0,
                 transition: {
                   duration: 0.2,
-                  ease: "easeIn"
-                }
-              }
-            }
+                  ease: "easeIn",
+                },
+              },
+            },
           }}
         >
           <ModalContent className="p-4">

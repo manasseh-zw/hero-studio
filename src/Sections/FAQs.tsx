@@ -5,7 +5,7 @@ import { Plus } from "lucide-react";
 
 export default function FAQs() {
   return (
-    <section id="faq" className="relative mx-auto w-full max-w-6xl px-4 py-14 sm:py-14">
+    <section id="faq" className="relative mx-auto w-full px-4 py-14 sm:py-14">
       <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-8 sm:gap-14">
         <div className="text-center">
           <h2 className="bg-hero-section-title bg-clip-text text-transparent text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">
