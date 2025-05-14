@@ -76,12 +76,13 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row items-center justify-center mt-6 sm:mt-8 gap-3 sm:gap-4 w-full sm:w-auto px-4 sm:px-0">
             <Button
               size="lg"
+              radius="lg"
               color="primary"
-              className="w-full sm:w-auto bg-default-foreground font-semibold leading-5 text-background h-12 sm:h-14"
-              radius="full"
+              className="bg-gradient-to-r from-pink-100 via-teal-100 to-purple-200 text-black font-medium border-none hover:scale-105 active:scale-95 transition-transform shadow-lg"
             >
               Get Started
             </Button>
+
             <Link
               href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
               target="_blank"
@@ -90,11 +91,12 @@ export default function Hero() {
             >
               <Button
                 size="lg"
-                className="w-full sm:w-auto border border-white/30 font-medium leading-5 rounded-full h-12 sm:h-14"
+                radius="lg"
+                className="w-full sm:w-auto border border-white/30 font-medium leading-5 "
                 variant="bordered"
                 endContent={<Play size={20} className="ml-2" />}
               >
-                Watch Demo
+                Demo
               </Button>
             </Link>
           </div>

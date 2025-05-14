@@ -110,10 +110,10 @@ export default function AppNavbar(props: NavbarProps) {
           >
             <Button
               className={cn(
-                "bg-white text-black  transition-all duration-500",
+                " bg-gradient-to-r from-pink-100 via-teal-100 to-purple-200 text-black  border-none hover:scale-105 active:scale-95  shadow-lg transition-all duration-500",
                 scrolled ? "text-sm px-3 h-8" : "text-base px-4 h-10"
               )}
-              radius="full"
+              radius="lg"
               variant="solid"
             >
               Get Started
@@ -176,7 +176,7 @@ export default function AppNavbar(props: NavbarProps) {
                     as={Link}
                     className="bg-white font-bold text-black"
                     href="/#"
-                    radius="full"
+                    radius="lg"
                   >
                     Get Started
                   </Button>
