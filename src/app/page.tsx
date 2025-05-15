@@ -13,9 +13,7 @@ export default function Home() {
   return (
     <main className="flex w-full flex-col">
       <Hero />
-      <FadeIn>
-        <Showcase />
-      </FadeIn>
+      <Showcase />
       <SectionDivider className="z-10" />
       <FadeIn>
         <Features />

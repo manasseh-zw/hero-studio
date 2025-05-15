@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <main className="relative   overflow-hidden">
+    <main className="relative  overflow-hidden">
       {/* Background overlay with specific color */}
       <div className="absolute inset-0 bg-[#08090A]/85 mix-blend-multiply" />
 
