@@ -9,7 +9,11 @@ export default function HeroAvatarGroup() {
         max={4}
         renderCount={() => (
           <p className="text-small cursor-pointer text-foreground font-medium ms-2">
-            Join <span className="text-[#ff4694]">1000+</span> Builders.
+            Join{" "}
+            <span className="bg-gradient-to-r from-pink-100 via-teal-100 to-purple-200 bg-clip-text text-transparent font-bold">
+              1000+
+            </span>{" "}
+            Builders.
           </p>
         )}
         total={10}

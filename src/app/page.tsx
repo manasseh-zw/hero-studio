@@ -9,6 +9,7 @@ import Testimonial from "@/Sections/Testimonial";
 import FAQs from "@/Sections/FAQs";
 import Blog from "@/Sections/Blog";
 import Footer from "@/Sections/Footer";
+import { FadeIn } from "@/Components/FadeInAnimation";
 
 export default function Home() {
   return (
@@ -17,18 +18,32 @@ export default function Home() {
         <AppNavbar />
         <Hero />
       </div>
-      <Showcase />
+      <FadeIn>
+        <Showcase />
+      </FadeIn>
       <SectionDivider className="z-10" />
-      <Features />
+      <FadeIn>
+        <Features />
+      </FadeIn>
       <SectionDivider className="z-10" />
-      <Integrations />
+      <FadeIn>
+        <Integrations />
+      </FadeIn>
       <SectionDivider className="z-10" />
-      <Pricing />
+      <FadeIn>
+        <Pricing />
+      </FadeIn>
       <SectionDivider className="z-10" />
-      <Testimonial />
+      <FadeIn>
+        <Testimonial />
+      </FadeIn>
       <SectionDivider className="z-10 hidden sm:flex" />
-      <FAQs />
-      <Blog />
+      <FadeIn>
+        <FAQs />
+      </FadeIn>
+      <FadeIn>
+        <Blog />
+      </FadeIn>
       <Footer />
     </main>
   );

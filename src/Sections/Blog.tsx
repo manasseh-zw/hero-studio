@@ -9,7 +9,7 @@ export default function Blog() {
             From Our Blog
           </h2>
           <p className="mt-2 text-lg leading-8 text-gray-400">
-            Exploring the intersection of art and mechanics
+            Exploring the intersection of art and engineering
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
@@ -43,12 +43,16 @@ export default function Blog() {
                       alt=""
                       className="h-6 w-6 flex-none rounded-full bg-white/10"
                     />
+
                     {post.author.name}
                   </div>
                 </div>
               </div>
               <h3 className="mt-3 text-lg font-semibold leading-6 text-white group">
-                <a href={post.href}>
+                <a
+                  href={post.href}
+                  className="bg-gradient-to-r from-pink-100 via-teal-100 to-purple-200 bg-clip-text text-transparent"
+                >
                   <span className="absolute inset-0" />
                   {post.title}
                 </a>
