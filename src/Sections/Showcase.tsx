@@ -17,7 +17,7 @@ export default function Showcase() {
         <div className="flex w-full justify-center">
           <div className="w-full sm:max-w-[90%] md:max-w-[85%] lg:max-w-[80%] aspect-[1463 /1000] overflow-hidden rounded-lg sm:rounded-xl">
             <img
-              src="/STUDIO.png"
+              src="/showcase.png"
               alt="App screenshot"
               className="h-full w-full object-cover shadow-xl sm:shadow-2xl ring-1 ring-white/10"
               loading="lazy"

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Providers from "./Providers";
-import { harper, manrope, roboto } from "./font";
+import { roboto } from "./font";
 import AppNavbar from "@/Components/Navbar";
-import Footer from "@/Sections/Footer";
+import Footer from "@/Components/Footer";
 
 export const metadata: Metadata = {
   title: "Hero Studio",
@@ -22,17 +22,15 @@ export default function RootLayout({
       </head>
       <body
         className={`
-        ${manrope.variable} 
         ${roboto.variable} 
         ${roboto.className} 
-        ${harper.variable} 
         antialiased
         `}
       >
         <Providers>
           <AppNavbar />
           {children}
-          <Footer/>
+          <Footer />
         </Providers>
       </body>
     </html>
