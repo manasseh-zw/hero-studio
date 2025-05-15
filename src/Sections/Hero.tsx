@@ -7,12 +7,12 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <main className="relative  overflow-hidden">
+    <main className="relative   overflow-hidden">
       {/* Background overlay with specific color */}
       <div className="absolute inset-0 bg-[#08090A]/85 mix-blend-multiply" />
 
       {/* Gradient transition to bottom - MODIFIED for smoother transition */}
-      <div className="absolute bottom-0 left-0 right-0 h-72 sm:h-96 bg-gradient-to-t from-[#08090A] via-[#08090A]/70 to-transparent z-10" />
+      <div className="absolute bottom-0 left-0 right-0 h-72 sm:h-96 bg-gradient-to-t from-[#08090A] via-[#08090A]/60 to-transparent z-10" />
 
       {/* Left gradient blob */}
       <div
@@ -20,7 +20,7 @@ export default function Hero() {
         aria-hidden="true"
       >
         <div
-          className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-r from-[#ff4694] to-[#443f98] opacity-[0.35]"
+          className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-r from-[#ff4694] to-[#443f98] opacity-[0.45]"
           style={{
             clipPath:
               "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
@@ -34,7 +34,7 @@ export default function Hero() {
         aria-hidden="true"
       >
         <div
-          className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-r from-[#ff4694] to-[#776fff] opacity-25"
+          className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-r from-[#ff4694] to-[#776ffb] opacity-45"
           style={{
             clipPath:
               "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
