@@ -38,9 +38,7 @@ export default function Home() {
       <FadeIn>
         <FAQs />
       </FadeIn>
-      <FadeIn>
-        <Blog />
-      </FadeIn>
+      <Blog />
     </main>
   );
 }
