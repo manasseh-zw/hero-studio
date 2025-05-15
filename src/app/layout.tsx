@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Providers from "./Providers";
 import { harper, manrope, roboto } from "./font";
+import AppNavbar from "@/Components/Navbar";
+import Footer from "@/Sections/Footer";
 
 export const metadata: Metadata = {
   title: "Hero Studio",
@@ -27,7 +29,11 @@ export default function RootLayout({
         antialiased
         `}
       >
-        <Providers>{children}</Providers>
+        <Providers>
+          <AppNavbar />
+          {children}
+          <Footer/>
+        </Providers>
       </body>
     </html>
   );

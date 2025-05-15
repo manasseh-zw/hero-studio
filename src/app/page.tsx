@@ -1,4 +1,3 @@
-import AppNavbar from "@/Components/Navbar";
 import Showcase from "@/Sections/Showcase";
 import Hero from "@/Sections/Hero";
 import Features from "@/Sections/Features";
@@ -8,14 +7,12 @@ import Pricing from "@/Sections/Pricing";
 import Testimonial from "@/Sections/Testimonial";
 import FAQs from "@/Sections/FAQs";
 import Blog from "@/Sections/Blog";
-import Footer from "@/Sections/Footer";
 import { FadeIn } from "@/Components/FadeInAnimation";
 
 export default function Home() {
   return (
     <main className="flex w-full flex-col">
       <div className="relative flex h-dvh w-full flex-col overflow-hidden">
-        <AppNavbar />
         <Hero />
       </div>
       <FadeIn>
@@ -44,7 +41,6 @@ export default function Home() {
       <FadeIn>
         <Blog />
       </FadeIn>
-      <Footer />
     </main>
   );
 }
