@@ -66,15 +66,17 @@ export default function AppNavbar(props: NavbarProps) {
       >
         {/* Logo */}
         <NavbarBrand className="transition-all duration-500">
-          <Logo width={scrolled ? 20 : 24} height={scrolled ? 20 : 24} />
-          <span
-            className={cn(
-              "ml-2 font-harper  tracking-wide text-default-foreground transition-all duration-500",
-              scrolled ? "text-lg" : "text-xl"
-            )}
-          >
-            Studio
-          </span>
+          <Link href="/">
+            <Logo width={scrolled ? 20 : 24} height={scrolled ? 20 : 24} />
+            <span
+              className={cn(
+                "ml-2 font-harper  tracking-wide text-default-foreground transition-all duration-500",
+                scrolled ? "text-lg" : "text-xl"
+              )}
+            >
+              Studio
+            </span>
+          </Link>
         </NavbarBrand>
 
         {/* Navigation Links - Hidden on mobile */}
@@ -108,16 +110,18 @@ export default function AppNavbar(props: NavbarProps) {
               scrolled ? "gap-1" : "gap-3"
             )}
           >
-            <Button
-              className={cn(
-                " bg-gradient-to-r from-pink-100 via-teal-100 to-purple-200 text-black  border-none hover:scale-105 active:scale-95  shadow-lg transition-all duration-500",
-                scrolled ? "text-sm px-3 h-9" : "text-base px-4 h-10"
-              )}
-              radius="lg"
-              variant="solid"
-            >
-              Get Started
-            </Button>
+            <Link href="/contact">
+              <Button
+                className={cn(
+                  " bg-gradient-to-r from-pink-100 via-teal-100 to-purple-200 text-black font-medium border-none hover:scale-105 active:scale-95  shadow-lg transition-all duration-500",
+                  scrolled ? "text-sm px-3 h-9" : "text-base px-4 h-10"
+                )}
+                radius="lg"
+                variant="solid"
+              >
+                Contact
+              </Button>
+            </Link>
           </NavbarItem>
         </NavbarContent>
 
@@ -171,14 +175,18 @@ export default function AppNavbar(props: NavbarProps) {
             <ModalBody>
               <div className="space-y-6">
                 <div className="flex flex-col gap-3">
-                  <Button
-                    size="lg"
-                    radius="lg"
-                    color="primary"
-                    className="bg-gradient-to-r from-pink-100 via-teal-100 to-purple-200 text-black font-medium border-none hover:scale-105 active:scale-95 transition-transform shadow-lg w-full "
-                  >
-                    Get Started
-                  </Button>
+                  <Link href="/contact">
+                    <Button
+                      className={cn(
+                        " bg-gradient-to-r from-pink-100 via-teal-100 to-purple-200 text-black font-medium border-none hover:scale-105 active:scale-95  shadow-lg transition-all duration-500",
+                        scrolled ? "text-sm px-3 h-9" : "text-base px-4 h-10"
+                      )}
+                      radius="lg"
+                      variant="solid"
+                    >
+                      Contact
+                    </Button>
+                  </Link>
                 </div>
 
                 <div className="space-y-1">

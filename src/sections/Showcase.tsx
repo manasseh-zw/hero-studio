@@ -1,6 +1,6 @@
 export default function Showcase() {
   return (
-    <section id="showcase" className=" sm:pt-16 pb-10 sm:pb-14">
+    <section id="showcase" className="sm:mt-[-80px] sm:pt-16 pb-10 sm:pb-14">
       <div className="relative mx-auto max-w-7xl px-3 sm:px-4 pt-8 sm:pt-16">
         <div className="flex w-full justify-center">
           <div className="w-full sm:max-w-[90%] md:max-w-[85%] lg:max-w-[80%] aspect-[1463 /1000] overflow-hidden rounded-lg sm:rounded-xl">

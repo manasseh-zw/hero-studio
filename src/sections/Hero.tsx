@@ -43,7 +43,6 @@ export default function Hero() {
       {/* Grid overlay - now starting from the top */}
       <div className="absolute inset-0 h-full w-full -z-10 overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#27272a_1.5px,transparent_1.5px),linear-gradient(to_bottom,#27272a_1.5px,transparent_1.5px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_20%,#000_70%,transparent_150%)]">
-          {/* Central glow effect - moved higher */}
           <div className="absolute left-1/2 top-1/4 -translate-x-1/2 -translate-y-1/2">
             <div className="h-[600px] w-[1000px] rounded-full bg-gradient-to-b from-secondary/50 to-black/40 blur-[120px] opacity-80" />
           </div>

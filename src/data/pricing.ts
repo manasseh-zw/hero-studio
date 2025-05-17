@@ -97,7 +97,7 @@ export const tiers: Array<Tier> = [
     href: "#",
     featured: true,
     mostPopular: false,
-    description: "For large organizations requiring maximum AI capabilities.",
+    description: "For large organizations requiring full features.",
     price: {
       yearly: "$299",
       quarterly: "$89",

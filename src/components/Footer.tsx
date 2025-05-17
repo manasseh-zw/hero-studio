@@ -6,7 +6,7 @@ import { Link } from "@heroui/link";
 export default function Footer() {
   return (
     <footer className="bg-black flex w-full flex-col">
-      <div className="mx-auto w-full max-w-6xl px-6 py-12 lg:px-8">
+      <div className="mx-auto w-full max-w-6xl px-6 py-16 lg:px-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="space-y-4">
             <div className="flex items-center gap-3">
