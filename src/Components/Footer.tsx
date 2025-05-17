@@ -1,4 +1,4 @@
-import Logo from "@/Components/Logo";
+import Logo from "@/components/Logo";
 import { Divider } from "@heroui/divider";
 import { Chip } from "@heroui/chip";
 import { Link } from "@heroui/link";

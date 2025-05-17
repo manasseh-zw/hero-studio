@@ -9,7 +9,7 @@ import {
   Logo8,
   Logo9,
   Logo10,
-} from "@/Components/MockLogos";
+} from "@/components/MockLogos";
 
 export const brandLogos = [
   {

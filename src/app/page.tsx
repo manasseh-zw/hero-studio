@@ -1,13 +1,13 @@
-import Showcase from "@/Sections/Showcase";
-import Hero from "@/Sections/Hero";
-import Features from "@/Sections/Features";
-import SectionDivider from "@/Components/SectionDivider";
-import Integrations from "@/Sections/Integrations";
-import Pricing from "@/Sections/Pricing";
-import Testimonial from "@/Sections/Testimonial";
-import FAQs from "@/Sections/FAQs";
-import Blog from "@/Sections/Blog";
-import { FadeIn } from "@/Components/FadeInAnimation";
+import Showcase from "@/sections/Showcase";
+import Hero from "@/sections/Hero";
+import Features from "@/sections/Features";
+import SectionDivider from "@/components/SectionDivider";
+import Integrations from "@/sections/Integrations";
+import Pricing from "@/sections/Pricing";
+import Testimonial from "@/sections/Testimonial";
+import FAQs from "@/sections/FAQs";
+import Blog from "@/sections/Blog";
+import { FadeIn } from "@/components/FadeInAnimation";
 
 export default function Home() {
   return (

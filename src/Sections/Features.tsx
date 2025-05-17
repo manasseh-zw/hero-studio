@@ -1,4 +1,4 @@
-import SpotlightCard from "@/Components/SpotlightCard";
+import SpotlightCard from "@/components/SpotlightCard";
 import { AppFeatures } from "@/data/features";
 
 export default function Features() {

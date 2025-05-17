@@ -1,5 +1,5 @@
-import HeroAvatarGroup from "@/Components/HeroAvatarGroup";
-import Ticker from "@/Components/Ticker";
+import HeroAvatarGroup from "@/components/HeroAvatarGroup";
+import Ticker from "@/components/Ticker";
 import { brandLogos } from "@/data/logos";
 import { Button } from "@heroui/button";
 import { Play } from "lucide-react";

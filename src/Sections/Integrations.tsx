@@ -1,19 +1,20 @@
-import Ticker from "@/Components/Ticker";
+import Ticker from "@/components/Ticker";
 import { brandLogos } from "@/data/logos";
-import IntegrationGridItem from "@/Components/IntegrationGridItem";
+import IntegrationGridItem from "@/components/IntegrationGridItem";
 
 export default function Integrations() {
   return (
-    <section id="integrations" className="mx-auto w-full max-w-6xl px-4 sm:px-6 py-10 sm:py-14 lg:px-8">
+    <section
+      id="integrations"
+      className="mx-auto w-full max-w-6xl px-4 sm:px-6 py-10 sm:py-14 lg:px-8"
+    >
       <div className="mx-auto flex w-full max-w-4xl flex-col justify-center items-center gap-8 lg:flex-row lg:items-center lg:gap-12">
         <div className="text-center lg:text-left">
           <span className="text-neutral-400 bg-clip-text text-2xl sm:text-3xl font-semibold leading-7">
             Integrations
           </span>
           <div className="bg-hero-section-title bg-clip-text pt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight lg:inline-block">
-            <p className="sm:hidden">
-              Powerful seamless integrations
-            </p>
+            <p className="sm:hidden">Powerful seamless integrations</p>
             <p className="hidden sm:block">
               Powerful
               <br />

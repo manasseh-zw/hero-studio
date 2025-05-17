@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Providers from "./Providers";
 import { roboto } from "./font";
-import AppNavbar from "@/Components/Navbar";
-import Footer from "@/Components/Footer";
+import AppNavbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Hero Studio",
