@@ -51,14 +51,14 @@ export default function AppNavbar(props: NavbarProps) {
   }, []);
 
   return (
-    <div className="w-full flex justify-center px-4 pt-5 fixed top-0 z-50">
+    <div className="w-full flex justify-center pt-5 px-3 fixed top-0 z-50">
       <Navbar
         {...props}
         className={cn(
-          "max-w-full rounded-full bg-transparent transition-all duration-500 ease-in-out font-roboto border-1 border-zinc-700 border-opacity-0   ",
+          "max-w-full rounded-3xl bg-transparent transition-all duration-700 ease-in-out font-roboto border-1 border-zinc-700 border-opacity-0 ",
           scrolled
-            ? "bg-zinc-900 bg-opacity-70 h-14 backdrop-blur-md shadow-zinc-900/20 border-1 border-zinc-600 border-opacity-20 shadow-lg max-w-5xl px-1 py-2"
-            : "h-16 backdrop-blur-none max-w-6xl"
+            ? "bg-zinc-900 bg-opacity-70 h-14 backdrop-blur-md shadow-zinc-900/20 border-1 border-zinc-600 border-opacity-20 shadow-lg max-w-4xl  py-2"
+            : "h-16 backdrop-blur-none max-w-6xl "
         )}
         classNames={{
           base: "backdrop-blur-none backdrop-saturate-100",
@@ -111,7 +111,7 @@ export default function AppNavbar(props: NavbarProps) {
             <Button
               className={cn(
                 " bg-gradient-to-r from-pink-100 via-teal-100 to-purple-200 text-black  border-none hover:scale-105 active:scale-95  shadow-lg transition-all duration-500",
-                scrolled ? "text-sm px-3 h-8" : "text-base px-4 h-10"
+                scrolled ? "text-sm px-3 h-9" : "text-base px-4 h-10"
               )}
               radius="lg"
               variant="solid"

@@ -29,7 +29,10 @@ export default function Pricing() {
   };
 
   return (
-    <section id="pricing" className="relative flex mx-auto max-w-4xl flex-col items-center py-16">
+    <section
+      id="pricing"
+      className="relative flex mx-auto max-w-4xl flex-col items-center py-16"
+    >
       <div
         aria-hidden="true"
         className="px:5 absolute inset-x-0 top-3 z-0 h-full w-full transform-gpu overflow-hidden blur-3xl md:right-20 md:h-auto md:w-auto md:px-36"
@@ -50,7 +53,7 @@ export default function Pricing() {
             Flexible Pricing <br />{" "}
           </div>
         </div>
-        <p className="mx-auto text-center font-small leading-7 text-default-600 text-pretty sm:w-[600px] sm:text-[18px]">
+        <p className="mx-auto text-center font-small leading-7 text-default-600 text-pretty sm:w-[600px] sm:text-[18px] px-4 sm:px-2">
           Choose a plan that fits your team&apos;s needs – from startups to
           enterprises. Scale with confidence and get the most out of every
           project.

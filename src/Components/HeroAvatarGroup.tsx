@@ -3,7 +3,7 @@ import { AvatarGroup, Avatar } from "@heroui/react";
 
 export default function HeroAvatarGroup() {
   return (
-    <div className="p-2 px-4 bg-zinc-600 bg-opacity-20 border-1 border-opacity-30 border-zinc-800 backdrop-blur-sm rounded-full shadow-sm">
+    <div className="p-2 px-3 bg-zinc-600 bg-opacity-20 border-1 border-opacity-30 border-zinc-800 backdrop-blur-sm rounded-full shadow-sm">
       <AvatarGroup
         size="sm"
         max={4}

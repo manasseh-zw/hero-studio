@@ -1,5 +1,5 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 "use client";
+
 import { CardProps, Card, CardHeader, CardBody, Image } from "@heroui/react";
 import {
   useMotionValue,
@@ -15,6 +15,8 @@ interface SpotlightCardProps extends CardProps {
   content?: string;
   imageSrc?: string;
   imageAlt?: string;
+  size?: "small" | "medium" | "large";
+  accentColor?: string;
 }
 
 export default function SpotlightCard({
@@ -22,11 +24,12 @@ export default function SpotlightCard({
   content = "Outline, monitor, and deliver extensive work elements from inception to completion using project management and strategic roadmaps.",
   imageSrc = "/feature6.jpg",
   imageAlt = "Acme Planner",
+  size = "medium",
+  accentColor = "rgba(120, 40, 200, 0.2)",
   ...props
 }: SpotlightCardProps) {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
-
   const cardRef = React.useRef<HTMLDivElement>(null);
 
   function onMouseMove({
@@ -34,19 +37,30 @@ export default function SpotlightCard({
     clientY,
   }: React.MouseEvent<HTMLDivElement, MouseEvent>) {
     if (!cardRef?.current) return;
-
     const { left, top } = cardRef.current?.getBoundingClientRect();
-
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
   }
+
+  // Adjust image height based on card size
+  const getImageHeight = () => {
+    switch (size) {
+      case "small":
+        return "h-[8rem] lg:h-[8rem]";
+      case "large":
+        return "h-[14rem] lg:h-[14rem]";
+      case "medium":
+      default:
+        return "h-[10.9rem] lg:h-[10.2rem]";
+    }
+  };
 
   return (
     <Card
       {...props}
       ref={cardRef}
-      className="group relative w-full bg-zinc-900 shadow-large font-roboto"
-      radius="lg"
+      className={`group relative w-full bg-zinc-900 shadow-large font-roboto h-full border-1 border-zinc-800/30`}
+      radius="md"
       onMouseMove={onMouseMove}
     >
       <LazyMotion features={domAnimation}>
@@ -56,7 +70,7 @@ export default function SpotlightCard({
             background: useMotionTemplate`
               radial-gradient(
                 350px circle at ${mouseX}px ${mouseY}px,
-                rgba(120, 40, 200, 0.2),
+                ${accentColor},
                 rgba(80, 40, 140, 0.08) 40%,
                 rgba(0, 0, 0, 0) 70%
               )
@@ -64,14 +78,15 @@ export default function SpotlightCard({
           }}
         />
       </LazyMotion>
-      <CardHeader className="relative h-[10.9rem] lg:h-[10.2rem] p-0">
+      <CardHeader className={`relative ${getImageHeight()} p-0`}>
         <Image
           removeWrapper
           alt={imageAlt}
           className="h-full w-full object-cover bg-blend-darken"
-          src={imageSrc}
+          src={imageSrc || "/placeholder.svg"}
           style={{
-            // @ts-ignore
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-expect-error
             "-webkit-mask-image":
               "linear-gradient(to bottom, #000 70%, transparent 100%)",
           }}

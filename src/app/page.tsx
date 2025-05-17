@@ -11,7 +11,7 @@ import { FadeIn } from "@/Components/FadeInAnimation";
 
 export default function Home() {
   return (
-    <main className="flex w-full flex-col">
+    <main className="flex  w-full flex-col">
       <Hero />
       <Showcase />
       <SectionDivider className="z-10" />
