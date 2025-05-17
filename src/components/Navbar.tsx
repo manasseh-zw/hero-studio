@@ -14,9 +14,9 @@ import {
   Divider,
   cn,
 } from "@heroui/react";
-import Logo from "./Logo";
 import type { NavbarProps } from "@heroui/react";
 import { Menu } from "lucide-react";
+import Logo from "@/components/Logo";
 
 const navItems = [
   { name: "Features", href: "#features" },
