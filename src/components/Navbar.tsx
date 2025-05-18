@@ -16,7 +16,7 @@ import {
 import type { NavbarProps } from "@heroui/react";
 import { Menu } from "lucide-react";
 import Logo from "@/components/Logo";
-import { useRouter } from "next/navigation";
+import { useTransitionRouter } from "next-view-transitions";
 
 const navItems = [
   { name: "Features", href: "#features" },
@@ -29,9 +29,46 @@ const navItems = [
 export default function AppNavbar(props: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const router = useRouter();
+  const router = useTransitionRouter();
 
-  // Handle scroll event to change navbar appearance
+  function slideInOut() {
+    document.documentElement.animate(
+      [
+        {
+          opacity: 1,
+          transform: "translateY(0)",
+        },
+        {
+          opacity: 0.2,
+          transform: "translateY(-35%)",
+        },
+      ],
+      {
+        duration: 1500,
+        easing: "cubic-bezier(0.87,0,0.13,1)",
+        fill: "forwards",
+        pseudoElement: "::view-transition-old(root)",
+      }
+    );
+
+    document.documentElement.animate(
+      [
+        {
+          clipPath: "polygon(0% 100%,100% 100%,100% 100%,0% 100%)",
+        },
+        {
+          clipPath: "polygon(0% 100%,100% 100%,100% 0%,0% 0%)",
+        },
+      ],
+      {
+        duration: 1500,
+        easing: "cubic-bezier(0.87, 0, 0.13,1)",
+        fill: "forwards",
+        pseudoElement: "::view-transition-new(root)",
+      }
+    );
+  }
+
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
@@ -69,7 +106,11 @@ export default function AppNavbar(props: NavbarProps) {
         <NavbarBrand className="transition-all duration-500 ">
           <button
             className="flex items-center bg-transparent border-0 gap-2 p-0 m-0 "
-            onClick={() => router.push("/")}
+            onClick={() =>
+              router.push("/", {
+                onTransitionReady: slideInOut,
+              })
+            }
           >
             <Logo width={scrolled ? 20 : 24} height={scrolled ? 20 : 24} />
             <span
@@ -121,7 +162,11 @@ export default function AppNavbar(props: NavbarProps) {
               )}
               radius="lg"
               variant="solid"
-              onPress={() => router.push("/contact")}
+              onPress={() =>
+                router.push("/contact", {
+                  onTransitionReady: slideInOut,
+                })
+              }
             >
               Contact
             </Button>
@@ -186,7 +231,9 @@ export default function AppNavbar(props: NavbarProps) {
                     radius="lg"
                     variant="solid"
                     onPress={() => {
-                      router.push("/contact");
+                      router.push("/contact", {
+                        onTransitionReady: slideInOut,
+                      });
                       setIsMenuOpen(false);
                     }}
                   >

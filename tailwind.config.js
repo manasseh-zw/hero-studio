@@ -9,31 +9,16 @@ export const content = [
 export const theme = {
   extend: {
     keyframes: {
-      "scrolling-banner": {
-        from: { transform: "translateX(0)" },
-        to: { transform: "translateX(calc(-50% - var(--gap)/2))" },
+      border: {
+        to: { "--border-angle": "360deg" },
       },
-      "scrolling-banner-vertical": {
-        from: { transform: "translateY(0)" },
-        to: { transform: "translateY(calc(-50% - var(--gap)/2))" },
-      },
-    },
-    animation: {
-      "scrolling-banner": "scrolling-banner var(--duration) linear infinite",
-      "scrolling-banner-vertical":
-        "scrolling-banner-vertical var(--duration) linear infinite",
-    },
-    backgroundImage: {
-      "hero-section-title":
-        "linear-gradient(91deg, #FFF 32.88%, rgba(255, 255, 255, 0.40) 99.12%)",
     },
     animation: {
       border: "border 4s linear infinite",
     },
-    keyframes: {
-      border: {
-        to: { "--border-angle": "360deg" },
-      },
+    backgroundImage: {
+      "hero-section-title":
+        "linear-gradient(91deg, #FFF 32.88%, rgba(255, 255, 255, 0.40) 99.12%)",
     },
   },
 

@@ -64,7 +64,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <p className="text-center leading-7 bg-gradient-to-r from-pink-200 via-white to-purple-300 bg-clip-text text-transparent  font-roboto text-sm sm:text-base max-w-[280px] sm:max-w-[500px] relative z-10 px-2 sm:px-4">
+          <p className="text-center leading-7 bg-gradient-to-r from-teal-200 via-white to-purple-200 bg-clip-text text-transparent  font-roboto text-sm sm:text-base max-w-[280px] sm:max-w-[500px] relative z-10 px-2 sm:px-4">
             The AI-powered platform for seamless project management, smart
             automation.
           </p>

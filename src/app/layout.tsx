@@ -4,6 +4,7 @@ import Providers from "./Providers";
 import { harper, roboto } from "./font";
 import AppNavbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ViewTransitions } from "next-view-transitions";
 
 export const metadata: Metadata = {
   title: "Hero Studio",
@@ -29,9 +30,11 @@ export default function RootLayout({
         `}
       >
         <Providers>
-          <AppNavbar />
-          {children}
-          <Footer />
+          <ViewTransitions>
+            <AppNavbar />
+            {children}
+            <Footer />
+          </ViewTransitions>
         </Providers>
       </body>
     </html>
