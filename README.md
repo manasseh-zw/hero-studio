@@ -51,7 +51,7 @@ HeroUI Studio is a dark themed cutting-edge SaaS landing page template that comb
 - **Frontend:** Next.js 15 with TypeScript
 - **Styling:** Tailwind CSS
 - **Components:** HeroUI Component Library
-- **Animations:** Framer Motion
+- **Animations:** Framer Motion, Lenis, View Transitions
 - **Deployment:** Vercel
 
 ## 🚀 Getting Started
