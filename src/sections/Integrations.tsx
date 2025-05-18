@@ -34,7 +34,6 @@ export default function Integrations() {
               isVertical
               duration={50}
               gap="6px"
-              shouldPauseOnHover={false}
               className="hidden sm:block"
               isReverse={false}
             >

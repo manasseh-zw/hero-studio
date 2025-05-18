@@ -28,13 +28,21 @@ export default function Ticker({
     <>
       <style jsx>{`
         @keyframes scrolling-banner {
-          from { transform: translateX(0); }
-          to { transform: translateX(calc(-50% - var(--gap)/2)); }
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(calc(-50% - var(--gap) / 2));
+          }
         }
-        
+
         @keyframes scrolling-banner-vertical {
-          from { transform: translateY(0); }
-          to { transform: translateY(calc(-50% - var(--gap)/2)); }
+          from {
+            transform: translateY(0);
+          }
+          to {
+            transform: translateY(calc(-50% - var(--gap) / 2));
+          }
         }
 
         .animate-scrolling-banner {
@@ -81,6 +89,7 @@ export default function Ticker({
             "animate-scrolling-banner": !isVertical,
             "animate-scrolling-banner-vertical": isVertical,
             "[animation-direction:reverse]": isReverse,
+            "hover:[animation-play-state:paused]": shouldPauseOnHover,
           })}
         >
           {React.Children.map(children, (child) => React.cloneElement(child))}

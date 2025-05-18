@@ -101,12 +101,7 @@ export default function Hero() {
         {/* Brand ticker section */}
         <div className="w-full z-10 flex justify-center">
           <div className="max-w-5xl">
-            <Ticker
-              shouldPauseOnHover
-              gap="20px"
-              className="z-10 opacity-50"
-              isReverse={false}
-            >
+            <Ticker gap="20px" className="z-10 opacity-50" isReverse={false}>
               {brandLogos.map(({ key, logo }) => (
                 <div
                   key={key}
