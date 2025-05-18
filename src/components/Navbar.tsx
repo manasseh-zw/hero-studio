@@ -6,7 +6,6 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Link,
   Button,
   Modal,
   ModalContent,
@@ -17,10 +16,11 @@ import {
 import type { NavbarProps } from "@heroui/react";
 import { Menu } from "lucide-react";
 import Logo from "@/components/Logo";
+import { useRouter } from "next/navigation";
 
 const navItems = [
   { name: "Features", href: "#features" },
-  { name: "Showcase", href: "#showcase" },
+  { name: "Showcase", href: "#integrations" },
   { name: "Integrations", href: "#integrations" },
   { name: "Pricing", href: "#pricing" },
   { name: "FAQ", href: "#faq" },
@@ -29,6 +29,7 @@ const navItems = [
 export default function AppNavbar(props: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const router = useRouter();
 
   // Handle scroll event to change navbar appearance
   useEffect(() => {
@@ -65,18 +66,21 @@ export default function AppNavbar(props: NavbarProps) {
         }}
       >
         {/* Logo */}
-        <NavbarBrand className="transition-all duration-500">
-          <Link href="/">
+        <NavbarBrand className="transition-all duration-500 ">
+          <button
+            className="flex items-center bg-transparent border-0 gap-2 p-0 m-0 "
+            onClick={() => router.push("/")}
+          >
             <Logo width={scrolled ? 20 : 24} height={scrolled ? 20 : 24} />
             <span
               className={cn(
-                "ml-2 font-harper  tracking-wide text-default-foreground transition-all duration-500",
+                "font-harper tracking-wide text-default-foreground transition-all duration-500",
                 scrolled ? "text-lg" : "text-xl"
               )}
             >
               Studio
             </span>
-          </Link>
+          </button>
         </NavbarBrand>
 
         {/* Navigation Links - Hidden on mobile */}
@@ -89,15 +93,15 @@ export default function AppNavbar(props: NavbarProps) {
         >
           {navItems.map((item) => (
             <NavbarItem key={item.name}>
-              <Link
+              <a
+                href={item.href}
                 className={cn(
                   "text-default-600 hover:text-default-800 transition-colors duration-500",
                   scrolled ? "text-sm" : "text-base"
                 )}
-                href={item.href}
               >
                 {item.name}
-              </Link>
+              </a>
             </NavbarItem>
           ))}
         </NavbarContent>
@@ -110,18 +114,17 @@ export default function AppNavbar(props: NavbarProps) {
               scrolled ? "gap-1" : "gap-3"
             )}
           >
-            <Link href="/contact">
-              <Button
-                className={cn(
-                  " bg-gradient-to-r from-pink-100 via-teal-100 to-purple-200 text-black font-medium border-none hover:scale-105 active:scale-95  shadow-lg transition-all duration-500",
-                  scrolled ? "text-sm px-3 h-9" : "text-base px-4 h-10"
-                )}
-                radius="lg"
-                variant="solid"
-              >
-                Contact
-              </Button>
-            </Link>
+            <Button
+              className={cn(
+                " bg-gradient-to-r from-pink-100 via-teal-100 to-purple-200 text-black font-medium border-none hover:scale-105 active:scale-95  shadow-lg transition-all duration-500",
+                scrolled ? "text-sm px-3 h-9" : "text-base px-4 h-10"
+              )}
+              radius="lg"
+              variant="solid"
+              onPress={() => router.push("/contact")}
+            >
+              Contact
+            </Button>
           </NavbarItem>
         </NavbarContent>
 
@@ -175,30 +178,32 @@ export default function AppNavbar(props: NavbarProps) {
             <ModalBody>
               <div className="space-y-6">
                 <div className="flex flex-col gap-3">
-                  <Link href="/contact">
-                    <Button
-                      className={cn(
-                        " bg-gradient-to-r from-pink-100 via-teal-100 to-purple-200 text-black font-medium border-none hover:scale-105 active:scale-95  shadow-lg transition-all duration-500",
-                        scrolled ? "text-sm px-3 h-9" : "text-base px-4 h-10"
-                      )}
-                      radius="lg"
-                      variant="solid"
-                    >
-                      Contact
-                    </Button>
-                  </Link>
+                  <Button
+                    className={cn(
+                      " bg-gradient-to-r from-pink-100 via-teal-100 to-purple-200 text-black font-medium border-none hover:scale-105 active:scale-95  shadow-lg transition-all duration-500",
+                      scrolled ? "text-sm px-3 h-9" : "text-base px-4 h-10"
+                    )}
+                    radius="lg"
+                    variant="solid"
+                    onPress={() => {
+                      router.push("/contact");
+                      setIsMenuOpen(false);
+                    }}
+                  >
+                    Contact
+                  </Button>
                 </div>
 
                 <div className="space-y-1">
                   {navItems.map((item) => (
                     <div key={item.name}>
-                      <Link
+                      <a
                         className="block w-full py-3 text-white/80 hover:text-white"
                         href={item.href}
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {item.name}
-                      </Link>
+                      </a>
                       <Divider className="opacity-30" />
                     </div>
                   ))}

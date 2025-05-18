@@ -6,7 +6,7 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   :root {
     --scrollbar-track: rgba(24, 24, 27, 0.3);
     --scrollbar-thumb: rgba(139, 92, 246, 0.3);
@@ -41,4 +41,10 @@
     scrollbar-width: thin;
     scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
   }
+}
+
+@property --border-angle {
+  inherits: false;
+  initial-value: 0deg;
+  syntax: "<angle>";
 }

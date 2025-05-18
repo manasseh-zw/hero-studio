@@ -85,9 +85,7 @@ export default function SpotlightCard({
           className="h-full w-full object-cover bg-blend-darken"
           src={imageSrc || "/placeholder.svg"}
           style={{
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-expect-error
-            "-webkit-mask-image":
+            WebkitMaskImage:
               "linear-gradient(to bottom, #000 70%, transparent 100%)",
           }}
         />

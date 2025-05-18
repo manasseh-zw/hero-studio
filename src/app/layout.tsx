@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Providers from "./Providers";
-import { roboto } from "./font";
+import { harper, roboto } from "./font";
 import AppNavbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -24,6 +24,7 @@ export default function RootLayout({
         className={`
         ${roboto.variable} 
         ${roboto.className} 
+        ${harper.variable}
         antialiased
         `}
       >

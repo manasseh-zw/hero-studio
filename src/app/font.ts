@@ -96,3 +96,15 @@ export const roboto = localFont({
   variable: "--font-roboto",
   display: "swap",
 });
+
+export const harper = localFont({
+  src: [
+    {
+      path: "fonts/harper/HarperBold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-harper",
+  display: "swap",
+});

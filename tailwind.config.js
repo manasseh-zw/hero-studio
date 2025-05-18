@@ -27,6 +27,14 @@ export const theme = {
       "hero-section-title":
         "linear-gradient(91deg, #FFF 32.88%, rgba(255, 255, 255, 0.40) 99.12%)",
     },
+    animation: {
+      border: "border 4s linear infinite",
+    },
+    keyframes: {
+      border: {
+        to: { "--border-angle": "360deg" },
+      },
+    },
   },
 
   fontFamily: {
