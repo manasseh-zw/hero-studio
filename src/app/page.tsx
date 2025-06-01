@@ -10,6 +10,7 @@ import FAQs from "@/sections/FAQs";
 import Blog from "@/sections/Blog";
 import { FadeIn } from "@/components/FadeInAnimation";
 import ReactLenis from "lenis/react";
+import CTA from "@/components/CTA";
 
 export default function Home() {
   return (
@@ -38,6 +39,8 @@ export default function Home() {
           <FAQs />
         </FadeIn>
         <Blog />
+        <SectionDivider className="z-10 bg-black" />
+        <CTA />
       </main>
     </ReactLenis>
   );
