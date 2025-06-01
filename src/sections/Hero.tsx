@@ -88,9 +88,9 @@ export default function Hero() {
               <Button
                 size="lg"
                 radius="lg"
-                className="w-full sm:w-auto border border-white/30 font-medium leading-5"
+                className="w-full sm:w-auto border-[1.5px]  border-white/30 bg-zinc-950/30  font-medium leading-5"
                 variant="bordered"
-                endContent={<Play size={20} className="ml-2" />}
+                endContent={<Play size={20}  className="ml-2" />}
               >
                 Demo
               </Button>

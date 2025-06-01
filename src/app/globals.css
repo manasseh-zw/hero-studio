@@ -2,74 +2,74 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html {
-    scroll-behavior: smooth;
+  @layer base {
+    html {
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --scrollbar-track: rgba(24, 24, 27, 0.3);
+      --scrollbar-thumb: rgba(139, 92, 246, 0.3);
+      --scrollbar-thumb-hover: rgba(167, 139, 250, 0.5);
+    }
   }
 
-  :root {
-    --scrollbar-track: rgba(24, 24, 27, 0.3);
-    --scrollbar-thumb: rgba(139, 92, 246, 0.3);
-    --scrollbar-thumb-hover: rgba(167, 139, 250, 0.5);
+  @layer utilities {
+    /* For Webkit browsers (Chrome, Safari) */
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--scrollbar-track);
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--scrollbar-thumb);
+      border-radius: 5px;
+      border: 2px solid var(--scrollbar-track);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--scrollbar-thumb-hover);
+    }
+
+    /* For Firefox */
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+    }
   }
-}
 
-@layer utilities {
-  /* For Webkit browsers (Chrome, Safari) */
-  ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+  @property --border-angle {
+    inherits: false;
+    initial-value: 0deg;
+    syntax: "<angle>";
   }
 
-  ::-webkit-scrollbar-track {
-    background: var(--scrollbar-track);
-    border-radius: 5px;
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none !important;
   }
 
-  ::-webkit-scrollbar-thumb {
-    background: var(--scrollbar-thumb);
-    border-radius: 5px;
-    border: 2px solid var(--scrollbar-track);
+  ::view-transition-group(root) {
+    z-index: auto !important;
   }
 
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--scrollbar-thumb-hover);
+  ::view-transition-image-pair(root) {
+    isolation: isolate;
+    will-change: transform, opacity, clip-path;
+    z-index: 1;
   }
 
-  /* For Firefox */
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  ::view-transition-new(root) {
+    z-index: 1000;
+    animation: none !important;
   }
-}
 
-@property --border-angle {
-  inherits: false;
-  initial-value: 0deg;
-  syntax: "<angle>";
-}
-
-::view-transition-old(root),
-::view-transition-new(root) {
-  animation: none !important;
-}
-
-::view-transition-group(root) {
-  z-index: auto !important;
-}
-
-::view-transition-image-pair(root) {
-  isolation: isolate;
-  will-change: transform, opacity, clip-path;
-  z-index: 1;
-}
-
-::view-transition-new(root) {
-  z-index: 1000;
-  animation: none !important;
-}
-
-::view-transition-old(root) {
-  z-index: 1;
-  animation: none !important;
-}
+  ::view-transition-old(root) {
+    z-index: 1;
+    animation: none !important;
+  }

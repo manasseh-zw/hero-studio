@@ -93,17 +93,18 @@ export default function AppNavbar(props: NavbarProps) {
       <Navbar
         {...props}
         className={cn(
-          "max-w-full rounded-3xl bg-transparent transition-all duration-700 ease-in-out font-roboto border-1 border-zinc-700 border-opacity-0 ",
+          "max-w-full rounded-3xl  bg-transparent transition-all duration-700 ease-in-out font-roboto border-1 border-zinc-700 border-opacity-0 ",
           scrolled
-            ? "bg-zinc-900 bg-opacity-70 h-14 backdrop-blur-md shadow-zinc-900/20 border-1 border-zinc-600 border-opacity-20 shadow-lg max-w-4xl  py-2"
+            ? "bg-zinc-900 bg-opacity-70 h-14 backdrop-blur-md shadow-zinc-900/20 border-1 border-zinc-600 border-opacity-20 shadow-lg max-w-[50rem]  py-2"
             : "h-16 backdrop-blur-none max-w-6xl "
         )}
         classNames={{
           base: "backdrop-blur-none backdrop-saturate-100",
+          wrapper:"px-3"
         }}
       >
         {/* Logo */}
-        <NavbarBrand className="transition-all duration-500 ">
+        <NavbarBrand className={cn("transition-all duration-500 ",scrolled ? "px-2  " : "px-0")}>
           <button
             className="flex items-center bg-transparent border-0 gap-2 p-0 m-0 "
             onClick={() =>
@@ -158,7 +159,7 @@ export default function AppNavbar(props: NavbarProps) {
             <Button
               className={cn(
                 " bg-gradient-to-r from-pink-100 via-teal-100 to-purple-200 text-black font-medium border-none hover:scale-105 active:scale-95  shadow-lg transition-all duration-500",
-                scrolled ? "text-sm px-3 h-9" : "text-base px-4 h-10"
+                scrolled ? "text-sm  h-9" : "text-base  h-10"
               )}
               radius="lg"
               variant="solid"
