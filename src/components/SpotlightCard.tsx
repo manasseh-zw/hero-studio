@@ -59,8 +59,8 @@ export default function SpotlightCard({
     <Card
       {...props}
       ref={cardRef}
-      className={`group relative w-full bg-zinc-900 shadow-large font-roboto h-full border-1 border-zinc-800/30`}
-      radius="md"
+      className={`group relative w-full bg-zinc-990 shadow-lg font-roboto h-full border-1 border-zinc-800/50`}
+      radius="sm"
       onMouseMove={onMouseMove}
     >
       <LazyMotion features={domAnimation}>
@@ -82,7 +82,7 @@ export default function SpotlightCard({
         <Image
           removeWrapper
           alt={imageAlt}
-          className="h-full w-full object-cover bg-blend-darken"
+          className="h-full w-full object-cover bg-blend-darken rounded-sm"
           src={imageSrc || "/placeholder.svg"}
           style={{
             WebkitMaskImage:
