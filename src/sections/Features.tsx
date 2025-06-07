@@ -21,7 +21,7 @@ export default function Features() {
         </div>
 
         {/* Mobile layout (1 column) */}
-        <div className="mt-10 sm:mt-14 md:hidden space-y-6">
+        <div className="mt-10 sm:mt-14 md:hidden space-y-4">
           {AppFeatures.map((feature) => (
             <div key={feature.name}>
               <SpotlightCard
@@ -29,6 +29,7 @@ export default function Features() {
                 content={feature.description}
                 imageSrc={feature.imageSrc}
                 accentColor={purplePinkGlow}
+                radius="sm"
               />
             </div>
           ))}
@@ -36,7 +37,7 @@ export default function Features() {
 
         {/* Tablet layout (2 columns bento) */}
         <div className="hidden md:block lg:hidden mt-14">
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 gap-4">
             <div className="col-span-2">
               <SpotlightCard
                 heading={AppFeatures[0].name}
@@ -44,6 +45,7 @@ export default function Features() {
                 imageSrc={AppFeatures[0].imageSrc}
                 size="large"
                 accentColor={purplePinkGlow}
+                radius="sm"
               />
             </div>
 
@@ -53,6 +55,7 @@ export default function Features() {
                 content={AppFeatures[1].description}
                 imageSrc={AppFeatures[1].imageSrc}
                 accentColor={purplePinkGlow}
+                radius="sm"
               />
             </div>
             <div>
@@ -61,6 +64,7 @@ export default function Features() {
                 content={AppFeatures[2].description}
                 imageSrc={AppFeatures[2].imageSrc}
                 accentColor={purplePinkGlow}
+                radius="sm"
               />
             </div>
 
@@ -71,6 +75,7 @@ export default function Features() {
                 imageSrc={AppFeatures[3].imageSrc}
                 size="large"
                 accentColor={purplePinkGlow}
+                radius="sm"
               />
             </div>
           </div>
@@ -78,7 +83,7 @@ export default function Features() {
 
         {/* Desktop layout (complex bento grid) */}
         <div className="hidden lg:block mt-20">
-          <div className="grid grid-cols-12 gap-6 auto-rows-[minmax(200px,auto)]">
+          <div className="grid grid-cols-12 gap-4 auto-rows-[minmax(200px,auto)]">
             {/* First row */}
             <div className="col-span-8 row-span-1">
               <SpotlightCard
@@ -87,6 +92,7 @@ export default function Features() {
                 imageSrc={AppFeatures[0].imageSrc}
                 size="large"
                 accentColor={purplePinkGlow}
+                radius="sm"
               />
             </div>
             <div className="col-span-4 row-span-1">
@@ -96,6 +102,7 @@ export default function Features() {
                 imageSrc={AppFeatures[1].imageSrc}
                 size="medium"
                 accentColor={purplePinkGlow}
+                radius="sm"
               />
             </div>
 
@@ -106,6 +113,7 @@ export default function Features() {
                 imageSrc={AppFeatures[2].imageSrc}
                 size="medium"
                 accentColor={purplePinkGlow}
+                radius="sm"
               />
             </div>
             <div className="col-span-6 row-span-1">
@@ -115,6 +123,7 @@ export default function Features() {
                 imageSrc={AppFeatures[3].imageSrc}
                 size="medium"
                 accentColor={purplePinkGlow}
+                radius="sm"
               />
             </div>
           </div>
